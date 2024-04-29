@@ -52,7 +52,8 @@ struct PlayPad: View {
                             togglePlay(for: currentPlayer!)
                         },
                         nextAction: nextChannel,
-                        previousAction: previousChannel
+                        previousAction: previousChannel,
+                        toggleFavorite: channelManager.toggleFavorite  
                     )
                     .frame(maxWidth: .infinity)
                     .background(Color("Background"))
