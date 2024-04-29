@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C11D4DD32BDF1EDA0015F674 /* channels.json in Resources */ = {isa = PBXBuildFile; fileRef = C11D4DD22BDF1EDA0015F674 /* channels.json */; };
+		C11D4DD62BDF21CB0015F674 /* ChannelLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C11D4DD52BDF21CB0015F674 /* ChannelLoader.swift */; };
 		C160FBDA2BDBEA9A00D98571 /* TuneInPlusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C160FBD92BDBEA9A00D98571 /* TuneInPlusApp.swift */; };
 		C160FBDC2BDBEA9A00D98571 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C160FBDB2BDBEA9A00D98571 /* ContentView.swift */; };
 		C160FBDE2BDBEA9D00D98571 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C160FBDD2BDBEA9D00D98571 /* Assets.xcassets */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C11D4DD22BDF1EDA0015F674 /* channels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = channels.json; sourceTree = "<group>"; };
+		C11D4DD52BDF21CB0015F674 /* ChannelLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelLoader.swift; sourceTree = "<group>"; };
 		C160FBD62BDBEA9A00D98571 /* TuneInPlusApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TuneInPlusApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C160FBD92BDBEA9A00D98571 /* TuneInPlusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuneInPlusApp.swift; sourceTree = "<group>"; };
 		C160FBDB2BDBEA9A00D98571 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C11D4DD42BDF1EEA0015F674 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C11D4DD22BDF1EDA0015F674 /* channels.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		C160FBCD2BDBEA9A00D98571 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +81,7 @@
 				C160FC032BDDD48A00D98571 /* Model */,
 				C160FC042BDDD49600D98571 /* View */,
 				C160FC052BDDD4B000D98571 /* Services */,
+				C11D4DD42BDF1EEA0015F674 /* Data */,
 				C160FBDD2BDBEA9D00D98571 /* Assets.xcassets */,
 				C160FBDF2BDBEA9D00D98571 /* Preview Content */,
 			);
@@ -115,6 +128,7 @@
 			children = (
 				C160FBFC2BDC7BC100D98571 /* ChannelManager.swift */,
 				C160FBFA2BDC7AE400D98571 /* PlayerManager.swift */,
+				C11D4DD52BDF21CB0015F674 /* ChannelLoader.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -177,6 +191,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C11D4DD32BDF1EDA0015F674 /* channels.json in Resources */,
 				C160FBE12BDBEA9D00D98571 /* Preview Assets.xcassets in Resources */,
 				C160FBDE2BDBEA9D00D98571 /* Assets.xcassets in Resources */,
 			);
@@ -190,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C160FBF62BDC616700D98571 /* PlayPad.swift in Sources */,
+				C11D4DD62BDF21CB0015F674 /* ChannelLoader.swift in Sources */,
 				C160FBF92BDC786A00D98571 /* PlaybackControls.swift in Sources */,
 				C160FBDC2BDBEA9A00D98571 /* ContentView.swift in Sources */,
 				C160FBFD2BDC7BC200D98571 /* ChannelManager.swift in Sources */,

@@ -16,20 +16,7 @@ class ChannelManager: ObservableObject {
     var audioPlayer = AudioPlayer()
     var currentPlayer: Channel?
     
-    var channels: [Channel] = [
-        Channel(name: "Air Vividh Bharti", url: URL(string: "https://air.pc.cdn.bitgravity.com/air/live/pbaudio001/playlist.m3u8")!),
-        Channel(name: "RED FM Mumbai", url: URL(string: "https://funasia.streamguys1.com/live9")!),
-        Channel(name: "RED FM Toronto", url: URL(string: "https://ice9.securenetsystems.net/CIRVFM")!),
-        Channel(name: "Radio City Mumbai", url: URL(string: "https://prclive4.listenon.in/Hindi")!),
-        Channel(name: "AIR - Suratgarh", url: URL(string: "https://air.pc.cdn.bitgravity.com/air/live/pbaudio064/chunklist.m3u8")!),
-        Channel(name: "Ishq FM", url: URL(string: "https://prclive4.listenon.in/Ishq")!),
-        Channel(name: "Punjabi FM", url: URL(string: "https://prclive4.listenon.in/Punjabi")!),
-        Channel(name: "Brit Asia", url: URL(string: "https://s4.radio.co/sfefce156f/listen")!),
-        Channel(name: "CRIF Brampton", url: URL(string: "https://ice66.securenetsystems.net/CIRF")!),
-        Channel(name: "CMR Toronto", url: URL(string: "https://live.cmr24.net/CMR/Punjabi-MQ/icecast.audio")!),
-        Channel(name: "Jaipur Radio", url: URL(string: "https://streamasiacdn.atc-labs.com/jaipurradio.aac")!),
-        Channel(name: "Radio Mirchi - NC, USA", url: URL(string: "https://streams.radio.co/s8d06d0298/listen")!),
-    ]
+    var channels: [Channel] = ChannelLoader.channels
     
     @Published var playingChannels: [Channel: Bool] = [:]
     @Published var currentChannelIndex = -1 {
@@ -42,10 +29,41 @@ class ChannelManager: ObservableObject {
     
     let nowPlayingInfo = MPNowPlayingInfoCenter.default()
     
+    func GetAppIcon() -> UIImage {
+        var appIcon: UIImage! {
+            guard let iconsDictionary = Bundle.main.infoDictionary?["CFBundleIcons"] as? [String:Any],
+                  let primaryIconsDictionary = iconsDictionary["CFBundlePrimaryIcon"] as? [String:Any],
+                  let iconFiles = primaryIconsDictionary["CFBundleIconFiles"] as? [String],
+                  let lastIcon = iconFiles.last else { return nil }
+            return UIImage(named: lastIcon)
+        }
+        return appIcon
+    }
+    
+    func loadChannelsFromJSON() -> [Channel] {
+        guard let url = Bundle.main.url(forResource: "channels", withExtension: "json", subdirectory: "Data") else {
+            return []
+        }
+        do {
+            let data = try Data(contentsOf: url)
+            let json = try JSONSerialization.jsonObject(with: data, options: [])
+            guard let jsonArray = json as? [[String: String]] else {
+                return []
+            }
+            return jsonArray.compactMap { Channel(name: $0["name"] ?? "", url: URL(string: $0["url"] ?? "")!) }
+        } catch {
+            print("Error loading channels from JSON: \(error.localizedDescription)")
+            return []
+        }
+    }
+    
     func updateNowPlayingInfo() {
         if currentChannelIndex != -1 {
             let currentChannel = channels[currentChannelIndex]
             nowPlayingInfo.nowPlayingInfo = [
+                MPMediaItemPropertyArtwork: MPMediaItemArtwork(boundsSize: CGSize(width: 80, height: 80)) { size in
+                    return self.GetAppIcon()
+                },
                 MPMediaItemPropertyTitle: currentChannel.name,
                 MPMediaItemPropertyArtist: currentChannel.url, // Update with actual artist name
                 MPNowPlayingInfoPropertyPlaybackRate: 1.0,
