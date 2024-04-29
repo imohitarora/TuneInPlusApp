@@ -13,9 +13,9 @@ struct PlayPad: View {
     
     @ObservedObject var channelManager = ChannelManager.shared // Add this line
     
-    @State private var currentPlayer: Channel?
+    @Binding var currentPlayer: Channel?
     
-    @State private var isPlaying = false
+    @Binding var isPlaying: Bool
     
     @State private var isFavourite = false
     
@@ -49,7 +49,7 @@ struct PlayPad: View {
                 withAnimation(.easeInOut) {
                     PlaybackControls(
                         isPlaying: isPlaying,
-                        isFavourite: channelManager.favoriteChannels.contains(currentPlayer!),
+                        isFavourite: (currentPlayer != nil) ? channelManager.favoriteChannels.contains(currentPlayer!) : false,
                         currentChannel: currentPlayer,
                         playPauseAction: {
                             togglePlay(for: currentPlayer!)
@@ -96,6 +96,3 @@ struct PlayPad: View {
     }
 }
 
-#Preview {
-    PlayPad(isShowingFavorites: true)
-}
