@@ -32,6 +32,7 @@ class ChannelManager: ObservableObject {
     
     let nowPlayingInfo = MPNowPlayingInfoCenter.default()
     
+    
     func GetAppIcon() -> UIImage {
         var appIcon: UIImage! {
             guard let iconsDictionary = Bundle.main.infoDictionary?["CFBundleIcons"] as? [String:Any],
@@ -132,21 +133,12 @@ class ChannelManager: ObservableObject {
     
     func toggleFavorite(channel: Channel) {
         print("toggleFavorite clicked")
-        if let index = favoriteChannels.firstIndex(where: { $0.name == channel.name }) {
+        if let index = favoriteChannels.firstIndex(of: channel) {
             favoriteChannels.remove(at: index)
             print("Removed from favorites")
-            if let index = channels.firstIndex(of: channel) {
-                channels[index].isFavorite = false
-            }
         } else {
             print("Added to favorites")
             favoriteChannels.append(channel)
-            if let index = channels.firstIndex(of: channel) {
-                channels[index].isFavorite = true
-            }
-            if let index = favoriteChannels.firstIndex(of: channel) {
-                favoriteChannels[index].isFavorite = true
-            }
         }
         print(favoriteChannels.map { $0.name })
         saveFavoriteChannels()

@@ -117,8 +117,8 @@
 			children = (
 				C160FBF32BDC612300D98571 /* ChannelRow.swift */,
 				C160FBF52BDC616700D98571 /* PlayPad.swift */,
-				C160FBDB2BDBEA9A00D98571 /* ContentView.swift */,
 				C160FBF82BDC786A00D98571 /* PlaybackControls.swift */,
+				C160FBDB2BDBEA9A00D98571 /* ContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";

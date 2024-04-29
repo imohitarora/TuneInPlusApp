@@ -27,7 +27,7 @@ struct PlayPad: View {
                 ScrollView(.vertical, showsIndicators: false) {
                     LazyVStack(spacing: 1) {
                         ForEach(isShowingFavorites ? channelManager.favoriteChannels : channelManager.channels, id: \.self) { channel in
-                            ChannelRow(channel: channel, isPlaying: channelManager.playingChannels[channel, default: false],  isFavourite: channelManager.favoriteChannels.contains(channel),  togglePlay: togglePlay, toggleFavorite: channelManager.toggleFavorite)
+                            ChannelRow(channel: channel, isPlaying: channelManager.playingChannels[channel, default: false],  isFavourite: channelManager.favoriteChannels.contains(channel),  togglePlay: togglePlay, toggleFavorite: toggleFavorite)
                                 .padding(.vertical, 5)
                                 .cornerRadius(15)
                                 .shadow(color: Color("Shadow"), radius: 5, x: 0, y: 2)
@@ -35,6 +35,9 @@ struct PlayPad: View {
                     }
                     .padding(.horizontal)
                     .background(Color("Background"))
+                }
+                .onAppear {
+                    channelManager.loadFavoriteChannels()
                 }
                 .padding(.bottom, isPlaying ? 70 : 0) // Add this
                 .navigationTitle("Radio Channels")
@@ -46,13 +49,14 @@ struct PlayPad: View {
                 withAnimation(.easeInOut) {
                     PlaybackControls(
                         isPlaying: isPlaying,
+                        isFavourite: channelManager.favoriteChannels.contains(currentPlayer!),
                         currentChannel: currentPlayer,
                         playPauseAction: {
                             togglePlay(for: currentPlayer!)
                         },
                         nextAction: nextChannel,
                         previousAction: previousChannel,
-                        toggleFavorite: channelManager.toggleFavorite
+                        toggleFavorite: toggleFavorite
                     )
                     .frame(maxWidth: .infinity)
                     .background(Color("Background"))
@@ -60,6 +64,10 @@ struct PlayPad: View {
                 }
             }
         }
+    }
+    
+    private func toggleFavorite(for channel: Channel) {        
+        channelManager.toggleFavorite(channel: channel)
     }
     
     private func togglePlay(for channel: Channel) {
@@ -89,5 +97,5 @@ struct PlayPad: View {
 }
 
 #Preview {
-    PlayPad(isShowingFavorites: false)
+    PlayPad(isShowingFavorites: true)
 }

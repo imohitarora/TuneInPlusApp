@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PlaybackControls: View {
     let isPlaying: Bool
+    var isFavourite: Bool
     let currentChannel: Channel?
     let playPauseAction: () -> Void
     let nextAction: () -> Void
@@ -18,7 +19,7 @@ struct PlaybackControls: View {
     var body: some View {
         HStack {
             // Now Playing information
-            Image(systemName: currentChannel?.isFavorite ?? false ? "heart.fill" : "heart")
+            Image(systemName: isFavourite ? "heart.fill" : "heart")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 30, height: 30)

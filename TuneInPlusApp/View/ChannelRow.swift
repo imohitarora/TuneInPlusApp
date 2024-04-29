@@ -30,7 +30,7 @@ struct ChannelRow: View {
             Button(action: {
                 toggleFavorite?(channel)
             }) {
-                Image(systemName: channel.isFavorite ? "heart.fill" : "heart")
+                Image(systemName: isFavourite ? "heart.fill" : "heart")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 30, height: 30)
@@ -50,7 +50,7 @@ struct ChannelRow: View {
             .buttonStyle(PlainButtonStyle())
         }
         .padding()
-        .background(background(for: isPlaying)) // Correct usage of background method
+        .background(isPlaying ? Color("PlayingBackground").opacity(0.2) : Color("IdleBackground").opacity(0.5))
         .cornerRadius(10)
     }
     
