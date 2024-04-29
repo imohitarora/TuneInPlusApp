@@ -16,7 +16,7 @@ class ChannelManager: ObservableObject {
     var audioPlayer = AudioPlayer()
     var currentPlayer: Channel?
     
-    var channels: [Channel] = ChannelLoader.channels
+    @Published var channels: [Channel] = ChannelLoader.channels
     
     @Published var playingChannels: [Channel: Bool] = [:]
     

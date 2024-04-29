@@ -17,6 +17,8 @@ struct PlayPad: View {
     
     @State private var isPlaying = false
     
+    @State private var isFavourite = false
+    
     let isShowingFavorites: Bool
     
     var body: some View {
@@ -25,14 +27,11 @@ struct PlayPad: View {
                 ScrollView(.vertical, showsIndicators: false) {
                     LazyVStack(spacing: 1) {
                         ForEach(isShowingFavorites ? channelManager.favoriteChannels : channelManager.channels, id: \.self) { channel in
-                            ChannelRow(channel: channel, isPlaying: channelManager.playingChannels[channel, default: false], togglePlay: togglePlay, toggleFavorite: channelManager.toggleFavorite)
+                            ChannelRow(channel: channel, isPlaying: channelManager.playingChannels[channel, default: false],  isFavourite: channelManager.favoriteChannels.contains(channel),  togglePlay: togglePlay, toggleFavorite: channelManager.toggleFavorite)
                                 .padding(.vertical, 5)
                                 .cornerRadius(15)
                                 .shadow(color: Color("Shadow"), radius: 5, x: 0, y: 2)
                         }
-                    }
-                    .onAppear {
-                        channelManager.loadFavoriteChannels()
                     }
                     .padding(.horizontal)
                     .background(Color("Background"))
@@ -53,7 +52,7 @@ struct PlayPad: View {
                         },
                         nextAction: nextChannel,
                         previousAction: previousChannel,
-                        toggleFavorite: channelManager.toggleFavorite  
+                        toggleFavorite: channelManager.toggleFavorite
                     )
                     .frame(maxWidth: .infinity)
                     .background(Color("Background"))
@@ -90,5 +89,5 @@ struct PlayPad: View {
 }
 
 #Preview {
-    PlayPad(isShowingFavorites: true)
+    PlayPad(isShowingFavorites: false)
 }

@@ -10,6 +10,7 @@ import SwiftUI
 struct ChannelRow: View {
     var channel: Channel
     var isPlaying: Bool
+    var isFavourite: Bool
     var togglePlay: ((Channel) -> Void)?
     var toggleFavorite: ((Channel) -> Void)?
     
@@ -60,5 +61,5 @@ struct ChannelRow: View {
 }
 
 #Preview {
-    ChannelRow(channel: Channel(name: "CMR Toronto", url: URL(string: "https://live.cmr24.net/CMR/Punjabi-MQ/icecast.audio")!), isPlaying: false)
+    ChannelRow(channel: Channel(name: "CMR Toronto", url: URL(string: "https://live.cmr24.net/CMR/Punjabi-MQ/icecast.audio")!), isPlaying: false, isFavourite: false)
 }
