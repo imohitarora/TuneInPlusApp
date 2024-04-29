@@ -148,7 +148,7 @@ class ChannelManager: ObservableObject {
                 favoriteChannels[index].isFavorite = true
             }
         }
-        print(favoriteChannels)
+        print(favoriteChannels.map { $0.name })
         saveFavoriteChannels()
     }
     
