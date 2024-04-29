@@ -13,11 +13,11 @@ struct ContentView: View {
     
     var body: some View {
         TabView {
-            PlayPad(audioPlayer: audioPlayer)
+            PlayPad(audioPlayer: audioPlayer, isShowingFavorites: false)
                 .tabItem {
                     Label("All Channels", systemImage: "radio")
                 }
-            Text("audioPlayer: audioPlayer")
+            PlayPad(audioPlayer: audioPlayer, isShowingFavorites: true)
                 .tabItem {
                     Label("Favourites", systemImage: "heart")
                 }

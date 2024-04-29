@@ -126,9 +126,9 @@
 		C160FC052BDDD4B000D98571 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				C160FBFC2BDC7BC100D98571 /* ChannelManager.swift */,
 				C160FBFA2BDC7AE400D98571 /* PlayerManager.swift */,
 				C11D4DD52BDF21CB0015F674 /* ChannelLoader.swift */,
+				C160FBFC2BDC7BC100D98571 /* ChannelManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";

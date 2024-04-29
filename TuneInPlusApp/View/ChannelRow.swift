@@ -11,6 +11,7 @@ struct ChannelRow: View {
     var channel: Channel
     var isPlaying: Bool
     var togglePlay: ((Channel) -> Void)?
+    var toggleFavorite: ((Channel) -> Void)?
     
     var body: some View {
         HStack {
@@ -26,9 +27,9 @@ struct ChannelRow: View {
             
             Spacer()
             Button(action: {
-                
+                toggleFavorite?(channel)
             }) {
-                Image(systemName: isPlaying ? "heart.fill" : "heart")
+                Image(systemName: channel.isFavorite ? "heart.fill" : "heart")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 30, height: 30)

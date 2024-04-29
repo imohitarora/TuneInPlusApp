@@ -19,6 +19,7 @@ class ChannelManager: ObservableObject {
     var channels: [Channel] = ChannelLoader.channels
     
     @Published var playingChannels: [Channel: Bool] = [:]
+    
     @Published var currentChannelIndex = -1 {
         didSet {
             if currentChannelIndex != -1 {
@@ -26,6 +27,8 @@ class ChannelManager: ObservableObject {
             }
         }
     }
+    
+    @Published var favoriteChannels: [Channel] = []
     
     let nowPlayingInfo = MPNowPlayingInfoCenter.default()
     
@@ -125,5 +128,38 @@ class ChannelManager: ObservableObject {
         currentChannelIndex = (currentChannelIndex - 1 + channels.count) % channels.count
         startPlayback(for: channels[currentChannelIndex])
         updateNowPlayingInfo()
+    }
+    
+    func toggleFavorite(channel: Channel) {
+        print("toggleFavorite clicked")
+        if let index = favoriteChannels.firstIndex(where: { $0.name == channel.name }) {
+            favoriteChannels.remove(at: index)
+            print("Removed from favorites")
+            if let index = channels.firstIndex(of: channel) {
+                channels[index].isFavorite = false
+            }
+        } else {
+            print("Added to favorites")
+            favoriteChannels.append(channel)
+            if let index = channels.firstIndex(of: channel) {
+                channels[index].isFavorite = true
+            }
+            if let index = favoriteChannels.firstIndex(of: channel) {
+                favoriteChannels[index].isFavorite = true
+            }
+        }
+        print(favoriteChannels)
+        saveFavoriteChannels()
+    }
+    
+    func saveFavoriteChannels() {
+        let favoriteChannelsData = favoriteChannels.map { try? JSONEncoder().encode($0) }
+        UserDefaults.standard.set(favoriteChannelsData, forKey: "favoriteChannels")
+    }
+    
+    func loadFavoriteChannels() {
+        if let favoriteChannelsData = UserDefaults.standard.array(forKey: "favoriteChannels") as? [Data] {
+            favoriteChannels = favoriteChannelsData.compactMap { try? JSONDecoder().decode(Channel.self, from: $0) }
+        }
     }
 }
