@@ -13,10 +13,6 @@ struct PlayPad: View {
     
     @ObservedObject var channelManager = ChannelManager.shared // Add this line
     
-    @Binding var currentPlayer: Channel?
-    
-    @Binding var isPlaying: Bool
-    
     @State private var isFavourite = false
     
     let isShowingFavorites: Bool
@@ -27,7 +23,7 @@ struct PlayPad: View {
                 ScrollView(.vertical, showsIndicators: false) {
                     LazyVStack(spacing: 1) {
                         ForEach(isShowingFavorites ? channelManager.favoriteChannels : channelManager.channels, id: \.self) { channel in
-                            ChannelRow(channel: channel, isPlaying: channelManager.playingChannels[channel, default: false],  isFavourite: channelManager.favoriteChannels.contains(channel),  togglePlay: togglePlay, toggleFavorite: toggleFavorite)
+                            ChannelRow(channel: channel, isPlaying: channelManager.currentPlayer != nil && channel == channelManager.currentPlayer ? true : false,  isFavourite: channelManager.favoriteChannels.contains(channel),  togglePlay: togglePlay, toggleFavorite: toggleFavorite)
                                 .padding(.vertical, 5)
                                 .cornerRadius(15)
                                 .shadow(color: Color("Shadow"), radius: 5, x: 0, y: 2)
@@ -39,20 +35,20 @@ struct PlayPad: View {
                 .onAppear {
                     channelManager.loadFavoriteChannels()
                 }
-                .padding(.bottom, isPlaying ? 70 : 0) // Add this
+                .padding(.bottom, channelManager.isPlaying ? 70 : 0) // Add this
                 .navigationTitle("Radio Channels")
                 .navigationBarTitleDisplayMode(.large)
                 .background(Color("Background").edgesIgnoringSafeArea(.all))
             }
-            if isPlaying {
+            if channelManager.isPlaying {
                 Spacer()
                 withAnimation(.easeInOut) {
                     PlaybackControls(
-                        isPlaying: isPlaying,
-                        isFavourite: (currentPlayer != nil) ? channelManager.favoriteChannels.contains(currentPlayer!) : false,
-                        currentChannel: currentPlayer,
+                        isPlaying: channelManager.isPlaying,
+                        isFavourite: (channelManager.currentPlayer != nil) ? channelManager.favoriteChannels.contains(channelManager.currentPlayer!) : false,
+                        currentChannel: channelManager.currentPlayer,
                         playPauseAction: {
-                            togglePlay(for: currentPlayer!)
+                            togglePlay(for: channelManager.currentPlayer!)
                         },
                         nextAction: nextChannel,
                         previousAction: previousChannel,
@@ -66,33 +62,27 @@ struct PlayPad: View {
         }
     }
     
-    private func toggleFavorite(for channel: Channel) {        
+    private func toggleFavorite(for channel: Channel) {
         channelManager.toggleFavorite(channel: channel)
     }
     
     private func togglePlay(for channel: Channel) {
-        if channelManager.playingChannels[channel, default: false] {
+        if channelManager.isPlaying {
             channelManager.stopPlayback()
-            currentPlayer = nil
-            isPlaying = false
         } else {
             if let index = channelManager.channels.firstIndex(of: channel) {
                 channelManager.currentChannelIndex = index
             }
             channelManager.startPlayback(for: channel)
-            currentPlayer = channel
-            isPlaying = true
         }
     }
     
     private func nextChannel() {
         channelManager.nextChannel()
-        currentPlayer = channelManager.channels[channelManager.currentChannelIndex]
     }
     
     private func previousChannel() {
         channelManager.previousChannel()
-        currentPlayer = channelManager.channels[channelManager.currentChannelIndex]
     }
 }
 
