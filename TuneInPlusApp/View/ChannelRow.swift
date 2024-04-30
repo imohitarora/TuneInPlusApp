@@ -16,11 +16,14 @@ struct ChannelRow: View {
     
     var body: some View {
         HStack {
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 5) {
                 Text(channel.name)
                     .font(.headline)
                     .fontWeight(.medium)
                     .foregroundColor(.primary)
+                Text(channel.url.formatted())
+                    .font(.caption2)
+                    .foregroundColor(.secondary)
             }
             .onTapGesture {
                 togglePlay?(channel)

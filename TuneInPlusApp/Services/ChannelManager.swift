@@ -14,21 +14,16 @@ class ChannelManager: ObservableObject {
     static let shared = ChannelManager()
     
     var audioPlayer = AudioPlayer()
-    var currentPlayer: Channel?
+    
+    @Published var currentPlayer: Channel?
     
     @Published var channels: [Channel] = ChannelLoader.channels
     
-    @Published var playingChannels: [Channel: Bool] = [:]
-    
-    @Published var currentChannelIndex = -1 {
-        didSet {
-            if currentChannelIndex != -1 {
-                playingChannels[channels[currentChannelIndex]] = true
-            }
-        }
-    }
+    @Published var currentChannelIndex = -1
     
     @Published var favoriteChannels: [Channel] = []
+    
+    @Published var isPlaying = false
     
     let nowPlayingInfo = MPNowPlayingInfoCenter.default()
     
@@ -85,13 +80,10 @@ class ChannelManager: ObservableObject {
     
     func startPlayback(for channel: Channel) {
         print("Starting playback for channel: \(channel.name)")
-        if let currentChannel = currentPlayer {
-            playingChannels[currentChannel] = false
-        }
         let playerItem = AVPlayerItem(url: channel.url)
         audioPlayer.replaceCurrentItem(with: playerItem)
         audioPlayer.play()
-        playingChannels[channel] = true
+        isPlaying = true
         currentPlayer = channel
         
         updateNowPlayingInfo()
@@ -107,10 +99,8 @@ class ChannelManager: ObservableObject {
     
     func stopPlayback() {
         audioPlayer.stop()
-        if let currentChannel = currentPlayer {
-            playingChannels[currentChannel] = false
-        }
-        
+        isPlaying = false
+        currentPlayer = nil
         // Add the following lines to stop playback in background
         do {
             try AVAudioSession.sharedInstance().setActive(false)
