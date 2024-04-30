@@ -11,9 +11,13 @@ import AVFoundation
 struct PlayPad: View {
     @StateObject var audioPlayer = AudioPlayer()
     
-    @ObservedObject var channelManager = ChannelManager.shared // Add this line
+    @ObservedObject var channelManager = ChannelManager.shared
     
     @State private var isFavourite = false
+    
+    @State private var searchQuery = ""
+    
+    @FocusState private var isFocused: Bool
     
     let isShowingFavorites: Bool
     
@@ -21,8 +25,13 @@ struct PlayPad: View {
         ZStack(alignment: .bottom) {
             NavigationView {
                 ScrollView(.vertical, showsIndicators: false) {
+                    SearchBar(text: $searchQuery)
+                        .padding(.horizontal)
+                        .padding(.top)
+                        .focused($isFocused)
+                    
                     LazyVStack(spacing: 1) {
-                        ForEach(isShowingFavorites ? channelManager.favoriteChannels : channelManager.channels, id: \.self) { channel in
+                        ForEach(isShowingFavorites ? channelManager.favoriteChannels.filter { searchQuery.isEmpty ? true : $0.name.lowercased().contains(searchQuery.lowercased()) } : channelManager.channels.filter { searchQuery.isEmpty ? true : $0.name.lowercased().contains(searchQuery.lowercased()) }, id: \.self) { channel in
                             ChannelRow(channel: channel, isPlaying: channelManager.currentPlayer != nil && channel == channelManager.currentPlayer ? true : false,  isFavourite: channelManager.favoriteChannels.contains(channel),  togglePlay: togglePlay, toggleFavorite: toggleFavorite)
                                 .padding(.vertical, 5)
                                 .cornerRadius(15)
@@ -35,7 +44,12 @@ struct PlayPad: View {
                 .onAppear {
                     channelManager.loadFavoriteChannels()
                 }
-                .padding(.bottom, channelManager.isPlaying ? 70 : 0) // Add this
+                .onChange(of: searchQuery) {
+                    if searchQuery.isEmpty {
+                        isFocused = false
+                    }
+                }
+                .padding(.bottom, channelManager.isPlaying ? 70 : 0)
                 .navigationTitle("Radio Channels")
                 .navigationBarTitleDisplayMode(.large)
                 .background(Color("Background").edgesIgnoringSafeArea(.all))
@@ -67,7 +81,8 @@ struct PlayPad: View {
     }
     
     private func togglePlay(for channel: Channel) {
-        if channelManager.isPlaying {
+        print(channel)
+        if channelManager.currentPlayer == channel && channelManager.isPlaying {
             channelManager.stopPlayback()
         } else {
             if let index = channelManager.channels.firstIndex(of: channel) {

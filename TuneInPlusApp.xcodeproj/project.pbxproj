@@ -19,6 +19,7 @@
 		C160FBF92BDC786A00D98571 /* PlaybackControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = C160FBF82BDC786A00D98571 /* PlaybackControls.swift */; };
 		C160FBFB2BDC7AE400D98571 /* PlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C160FBFA2BDC7AE400D98571 /* PlayerManager.swift */; };
 		C160FBFD2BDC7BC200D98571 /* ChannelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C160FBFC2BDC7BC100D98571 /* ChannelManager.swift */; };
+		C1FD3ABB2BE17A8F007ACE38 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FD3ABA2BE17A8F007ACE38 /* SearchBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		C160FBF82BDC786A00D98571 /* PlaybackControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackControls.swift; sourceTree = "<group>"; };
 		C160FBFA2BDC7AE400D98571 /* PlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerManager.swift; sourceTree = "<group>"; };
 		C160FBFC2BDC7BC100D98571 /* ChannelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelManager.swift; sourceTree = "<group>"; };
+		C1FD3ABA2BE17A8F007ACE38 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 			children = (
 				C160FBF32BDC612300D98571 /* ChannelRow.swift */,
 				C160FBF52BDC616700D98571 /* PlayPad.swift */,
+				C1FD3ABA2BE17A8F007ACE38 /* SearchBar.swift */,
 				C160FBF82BDC786A00D98571 /* PlaybackControls.swift */,
 				C160FBDB2BDBEA9A00D98571 /* ContentView.swift */,
 			);
@@ -211,6 +214,7 @@
 				C160FBFD2BDC7BC200D98571 /* ChannelManager.swift in Sources */,
 				C160FBFB2BDC7AE400D98571 /* PlayerManager.swift in Sources */,
 				C160FBF42BDC612300D98571 /* ChannelRow.swift in Sources */,
+				C1FD3ABB2BE17A8F007ACE38 /* SearchBar.swift in Sources */,
 				C160FBE82BDC045F00D98571 /* Channel.swift in Sources */,
 				C160FBDA2BDBEA9A00D98571 /* TuneInPlusApp.swift in Sources */,
 			);
