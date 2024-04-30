@@ -17,33 +17,40 @@ struct TuneInPlusApp: App {
         WindowGroup {
             ContentView(audioPlayer: audioPlayer)
                 .onAppear {
-                    // Configure audio session for background playback
-                    do {
-                        try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
-                        try AVAudioSession.sharedInstance().setActive(true)
-                    } catch {
-                        print("Error setting up audio session: \(error)")
-                    }
-                    
-                    // Handle remote commands
-                    let commandCenter = MPRemoteCommandCenter.shared()
-                    commandCenter.playCommand.addTarget { _ in
-                        channelManager.startPlayback(for: channelManager.channels[channelManager.currentChannelIndex])
-                        return .success
-                    }
-                    commandCenter.pauseCommand.addTarget { _ in
-                        channelManager.stopPlayback()
-                        return .success
-                    }
-                    commandCenter.previousTrackCommand.addTarget { _ in
-                        channelManager.previousChannel()
-                        return .success
-                    }
-                    commandCenter.nextTrackCommand.addTarget { _ in
-                        channelManager.nextChannel()
-                        return .success
-                    }
+                    configureAudioSession()
+                    handleRemoteCommand()
                 }
+        }
+    }
+    
+    func configureAudioSession() {
+        // Configure audio session for background playback
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+            try AVAudioSession.sharedInstance().setActive(true)
+        } catch {
+            print("Error setting up audio session: \(error)")
+        }
+    }
+    
+    func handleRemoteCommand() {
+        // Handle remote commands
+        let commandCenter = MPRemoteCommandCenter.shared()
+        commandCenter.playCommand.addTarget { _ in
+            channelManager.startPlayback(for: channelManager.channels[channelManager.currentChannelIndex])
+            return .success
+        }
+        commandCenter.pauseCommand.addTarget { _ in
+            channelManager.stopPlayback()
+            return .success
+        }
+        commandCenter.previousTrackCommand.addTarget { _ in
+            channelManager.previousChannel()
+            return .success
+        }
+        commandCenter.nextTrackCommand.addTarget { _ in
+            channelManager.nextChannel()
+            return .success
         }
     }
 }

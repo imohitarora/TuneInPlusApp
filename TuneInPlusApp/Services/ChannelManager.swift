@@ -140,7 +140,6 @@ class ChannelManager: ObservableObject {
             print("Added to favorites")
             favoriteChannels.append(channel)
         }
-        print(favoriteChannels.map { $0.name })
         saveFavoriteChannels()
     }
     
