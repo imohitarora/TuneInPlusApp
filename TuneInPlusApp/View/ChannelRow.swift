@@ -11,6 +11,7 @@ struct ChannelRow: View {
     var channel: Channel
     var isPlaying: Bool
     var isFavourite: Bool
+    var isShowingFavouritesTab: Bool
     var togglePlay: ((Channel) -> Void)?
     var toggleFavorite: ((Channel) -> Void)?
     
@@ -18,10 +19,12 @@ struct ChannelRow: View {
         HStack {
             VStack(alignment: .leading, spacing: 2) {
                 Text(channel.name)
-                    .font(.headline)
-                    .fontWeight(.medium)
+                    .lineLimit(1)
+                    .font(.subheadline)
+                    .textCase(.uppercase)
                     .foregroundColor(.primary)
                 Text(channel.meta ?? "")
+                    .lineLimit(1)
                     .font(.caption2)
                     .foregroundColor(.secondary)
             }
@@ -30,16 +33,18 @@ struct ChannelRow: View {
             }
             
             Spacer()
-            Button(action: {
-                toggleFavorite?(channel)
-            }) {
-                Image(systemName: isFavourite ? "heart.fill" : "heart")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 30, height: 30)
-                    .foregroundColor(.blue)
+            if isShowingFavouritesTab {
+                Button(action: {
+                    toggleFavorite?(channel)
+                }) {
+                    Image(systemName: isFavourite ? "heart.fill" : "heart")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 30, height: 30)
+                        .foregroundColor(.blue)
+                }
+                .buttonStyle(PlainButtonStyle())
             }
-            .buttonStyle(PlainButtonStyle())
             
             Button(action: {
                 togglePlay?(channel)
@@ -64,5 +69,5 @@ struct ChannelRow: View {
 }
 
 #Preview {
-    ChannelRow(channel: Channel(name: "CMR Toronto", url: URL(string: "https://live.cmr24.net/CMR/Punjabi-MQ/icecast.audio")!, meta: "INDIA"), isPlaying: false, isFavourite: false)
+    ChannelRow(channel: Channel(name: "CMR Toronto", url: URL(string: "https://live.cmr24.net/CMR/Punjabi-MQ/icecast.audio")!, meta: "INDIA"), isPlaying: false, isFavourite: false, isShowingFavouritesTab: false)
 }
