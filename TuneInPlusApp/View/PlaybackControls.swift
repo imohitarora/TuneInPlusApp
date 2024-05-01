@@ -22,8 +22,8 @@ struct PlaybackControls: View {
             Image(systemName: isFavourite ? "heart.fill" : "heart")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 30, height: 30)
-                .foregroundColor(.blue)
+                .frame(width: 25, height: 30)
+                .foregroundColor(.blue.opacity(0.9))
                 .onTapGesture {
                     if let currentChannel = currentChannel {
                         toggleFavorite(currentChannel)
@@ -31,9 +31,10 @@ struct PlaybackControls: View {
                 }
             VStack(alignment: .leading) {
                 Text("Now Playing:")
-                    .font(.caption)
+                    .font(.caption2)
                 Text(currentChannel?.name ?? "Song Title - Artist Name")
-                    .font(.headline)
+                    .font(.subheadline)
+                    .textCase(.uppercase)
             }
             Spacer()
             // Playback controls
@@ -42,19 +43,19 @@ struct PlaybackControls: View {
                     Image(systemName: "backward.fill")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: 30, height: 30)
+                        .frame(width: 25, height: 30)
                 }
                 Button(action: playPauseAction) {
                     Image(systemName: isPlaying ? "stop.circle" : "play.fill")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: 30, height: 30)
+                        .frame(width: 25, height: 30)
                 }
                 Button(action: nextAction) {
                     Image(systemName: "forward.fill")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: 30, height: 30)
+                        .frame(width: 25, height: 30)
                 }
             }
         }
