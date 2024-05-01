@@ -1,26 +1,121 @@
 [
     {
+        "name": "Shuddh Desi Radio",
+        "url": "https://streamer.radio.co/se30891e37/listen",
+        "meta": "INDIA-HINDI"
+    },
+    {
+        "name": "Sitara FM",
+        "url": "https://server6.radio-streams.net:18048/stream",
+        "meta": "INDIA-HINDI"
+    },
+    {
+        "name": "Spice Radio Toronto",
+        "url": "https://spiceradioca1.radioca.st/stream",
+        "meta": "INDIA-HINDI"
+    },
+    {
+        "name": "Suno Sharda - 90.8 FM",
+        "url": "https://streamasiacdn.atc-labs.com/shardaradio.aac",
+        "meta": "INDIA-HINDI"
+    },
+    {
+        "name": "Unity 101",
+        "url": "https://ssl.canstream.co.uk:8701/live.mp3",
+        "meta": "INDIA-HINDI"
+    },
+    {
+        "name": "Vividh Bharti Mumbai",
+        "url": "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio011/hlspbaudio011_Auto.m3u8",
+        "meta": "INDIA-HINDI"
+    },
+    {
+        "name": "Bol Punjabi Radio",
+        "url": "https://bolpunjabi-ekamsoftware.radioca.st/stream",
+        "meta": "INDIA-PUNJABI"
+    },
+    {
+        "name": "Bollywood Punjabi Radio",
+        "url": "https://stream.zeno.fm/1k0y9f0cm0quv",
+        "meta": "INDIA-PUNJABI"
+    },
+    {
+        "name": "Brit Asia Radio Punjabi",
+        "url": "https://s4.radio.co/sfefce156f/listen",
+        "meta": "INDIA-PUNJABI"
+    },
+    {
+        "name": "Radio Humsafar Brampton, ON",
+        "url": "https://ice66.securenetsystems.net/CIRF",
+        "meta": "CANADA-PUNJABI-SOUTH ASIA"
+    },
+    {
+        "name": "Diversity FM 101.3 Toronto, ON",
+        "url": "https://live.cmr24.net/CMR/Punjabi-MQ/icecast.audio",
+        "meta": "CANADA-PUNJABI"
+    },
+    {
+        "name": "Desi World Radio (HQ)",
+        "url": "https://desiworldradio.com/stream.m3u",
+        "meta": "USA-PUNJABI"
+    },
+    {
+        "name": "Doaba Radio",
+        "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/SP_R4467890_SC",
+        "meta": "INDIA-PUNJABI"
+    },
+    {
+        "name": "Dreamz Punjabi Radio",
+        "url": "https://c7.radioboss.fm/stream/52",
+        "meta": "INDIA-PUNJABI"
+    },
+    {
+        "name": "Harman Radio",
+        "url": "https://radio.sanbroz.com/radio/8000/radio.mp3",
+        "meta": "INDIA-PUNJABI"
+    },
+    {
+        "name": "Radio Central 24",
+        "url": "https://casper.radioca.st/;",
+        "meta": "UK-BRITAIN-IRELAND-ENGLISH-PUNJABI-URDU"
+    },
+    {
+        "name": "Radio Punjab USA",
+        "url": "https://s5.voscast.com:9281/stream",
+        "meta": "INDIA-PUNJABI"
+    },
+    {
+        "name": "RED FM Toronto 88.9 FM",
+        "url": "https://ice9.securenetsystems.net/CIRVFM",
+        "meta": "INDIA-PUNJABI"
+    },
+    {
+        "name": "Sadda Radio",
+        "url": "https://ais-edge106-live365-dal02.cdnstream.com/a18446",
+        "meta": "INDIA-PUNJABI"
+    },
+    {
         "name": "Air Vividh Bharti",
         "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio001/playlist.m3u8",
         "meta": "INDIA-HINDI"
     },
     {
-        "name": "Red FM - Mumbai",
+        "name": "Red FM",
         "url": "https://funasia.streamguys1.com/live9",
-        "meta": "INDIA-HINDI"
+        "meta": "INDIA-MUMBAI-HINDI"
     },
     {
-        "name": "Radio City FM - Mumbai",
+        "name": "Radio City",
         "url": "https://prclive4.listenon.in/Hindi",
-        "meta": "INDIA-HINDI"
+        "meta": "INDIA-MUMBAI-HINDI"
     },
     {
-        "name": "Ishq FM - Mumbai",
+        "name": "Ishq FM",
         "url": "https://prclive4.listenon.in/Ishq",
         "meta": "INDIA-HINDI"
     },
     {
-        "name": "Punjabi FM - Mumbai",
+        "name": "Punjabi FM",
         "url": "https://prclive4.listenon.in/Punjabi",
         "meta": "INDIA-PUNJABI"
     },
@@ -110,9 +205,9 @@
         "meta": "INDIA-HINDI"
     },
     {
-        "name": "CHAH \"My Radio 580\" Edmonton, AB",
+        "name": "CHAH Radio Edmonton, AB",
         "url": "https://ais-sa1.streamon.fm/7681_64k.mp3",
-        "meta": "CANADA-ENGLISH-HINDI-MANDARIN-PUNJABI-TAGALOG"
+        "meta": "CANADA-ENGLISH-HINDI-PUNJABI"
     },
     {
         "name": "Cina Radio",
@@ -232,7 +327,7 @@
     {
         "name": "Mirchi Bay Area",
         "url": "https://18743.live.streamtheworld.com/SFO_HIN_PSTAAC/HLS/playlist.m3u8",
-        "meta": "THE UNITED STATES OF AMERICA-HINDI"
+        "meta": "USA-HINDI"
     },
     {
         "name": "Mirchi FM Fiji",
@@ -247,7 +342,7 @@
     {
         "name": "Mirchi New Jersey",
         "url": "https://19013.live.streamtheworld.com/NJS_HIN_ESTAAC/HLS/playlist.m3u8",
-        "meta": "THE UNITED STATES OF AMERICA-HINDI"
+        "meta": "USA-HINDI"
     },
     {
         "name": "Mirchi One 89.6 Qatar / NC, USA",
@@ -277,7 +372,7 @@
     {
         "name": "Radio Central 24",
         "url": "https://philae.shoutca.st/tunein/casper.pls",
-        "meta": "THE UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND-ENGLISH-HINDI-INDIAN-URDU"
+        "meta": "UK-IRELAND-ENGLISH-HINDI-URDU"
     },
     {
         "name": "Radio Central 24",
@@ -380,9 +475,9 @@
         "meta": "INDIA-HINDI"
     },
     {
-        "name": "Sangeet Radio FM 95.1 AM 1460 Houston, TX, US",
+        "name": "Sangeet Radio 95.1 Houston,TX",
         "url": "https://ice8.securenetsystems.net/SGTRADIO",
-        "meta": "THE UNITED STATES OF AMERICA-ENGLSIH-HINDI-URDU"
+        "meta": "USA-ENGLSIH-HINDI-URDU"
     },
     {
         "name": "Sayaji FM",
@@ -393,101 +488,6 @@
         "name": "Shreya Ghosal",
         "url": "https://drive.uber.radio/uber/bollywoodshreyaghosal/icecast.audio",
         "meta": "INDIA-HINDI"
-    },
-    {
-        "name": "Shuddh Desi Radio",
-        "url": "https://streamer.radio.co/se30891e37/listen",
-        "meta": "INDIA-HINDI"
-    },
-    {
-        "name": "Sitara FM",
-        "url": "https://server6.radio-streams.net:18048/stream",
-        "meta": "INDIA-HINDI"
-    },
-    {
-        "name": "Spice Radio Toronto",
-        "url": "https://spiceradioca1.radioca.st/stream",
-        "meta": "INDIA-HINDI"
-    },
-    {
-        "name": "Suno Sharda - 90.8 FM",
-        "url": "https://streamasiacdn.atc-labs.com/shardaradio.aac",
-        "meta": "INDIA-HINDI"
-    },
-    {
-        "name": "Unity 101",
-        "url": "https://ssl.canstream.co.uk:8701/live.mp3",
-        "meta": "INDIA-HINDI"
-    },
-    {
-        "name": "Vividh Bharti Mumbai",
-        "url": "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio011/hlspbaudio011_Auto.m3u8",
-        "meta": "INDIA-HINDI"
-    },
-    {
-        "name": "Bol Punjabi Radio",
-        "url": "https://bolpunjabi-ekamsoftware.radioca.st/stream",
-        "meta": "INDIA-PUNJABI"
-    },
-    {
-        "name": "Bollywood Punjabi Radio",
-        "url": "https://stream.zeno.fm/1k0y9f0cm0quv",
-        "meta": "INDIA-PUNJABI"
-    },
-    {
-        "name": "Brit Asia Radio Punjabi",
-        "url": "https://s4.radio.co/sfefce156f/listen",
-        "meta": "INDIA-PUNJABI"
-    },
-    {
-        "name": "CIRF-AM 1350 'Radio Humsafar' Brampton, ON",
-        "url": "https://ice66.securenetsystems.net/CIRF",
-        "meta": "CANADA-PUNJABI-SOUTH ASIAN LANGUAGES"
-    },
-    {
-        "name": "CJSA-HD4 CMR Diversity FM 101.3 (Punjabi Stream) Toronto, ON",
-        "url": "https://live.cmr24.net/CMR/Punjabi-MQ/icecast.audio",
-        "meta": "CANADA-PUNJABI"
-    },
-    {
-        "name": "Desi World Radio (HQ)",
-        "url": "https://desiworldradio.com/stream.m3u",
-        "meta": "THE UNITED STATES OF AMERICA-PUNJABI"
-    },
-    {
-        "name": "Doaba Radio",
-        "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/SP_R4467890_SC",
-        "meta": "INDIA-PUNJABI"
-    },
-    {
-        "name": "Dreamz Punjabi Radio",
-        "url": "https://c7.radioboss.fm/stream/52",
-        "meta": "INDIA-PUNJABI"
-    },
-    {
-        "name": "Harman Radio",
-        "url": "https://radio.sanbroz.com/radio/8000/radio.mp3",
-        "meta": "INDIA-PUNJABI"
-    },
-    {
-        "name": "Radio Central 24",
-        "url": "https://casper.radioca.st/;",
-        "meta": "THE UNITED KINGDOM OF GREAT BRITAIN AND NORTHERN IRELAND-ENGLISH-PUNJABI-URDU"
-    },
-    {
-        "name": "Radio Punjab USA",
-        "url": "https://s5.voscast.com:9281/stream",
-        "meta": "INDIA-PUNJABI"
-    },
-    {
-        "name": "RED FM Toronto 88.9 FM",
-        "url": "https://ice9.securenetsystems.net/CIRVFM",
-        "meta": "INDIA-PUNJABI"
-    },
-    {
-        "name": "Sadda Radio",
-        "url": "https://ais-edge106-live365-dal02.cdnstream.com/a18446",
-        "meta": "INDIA-PUNJABI"
     },
     {
         "name": "Srgum Radio",

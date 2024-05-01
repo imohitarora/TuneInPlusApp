@@ -22,6 +22,7 @@ struct ChannelRow: View {
                     .lineLimit(1)
                     .font(.subheadline)
                     .textCase(.uppercase)
+                    .fontWeight(.medium)
                     .foregroundColor(.primary)
                 Text(channel.meta ?? "")
                     .lineLimit(1)
@@ -39,23 +40,25 @@ struct ChannelRow: View {
                 }) {
                     Image(systemName: isFavourite ? "heart.fill" : "heart")
                         .resizable()
+                        .font(.title)
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 25, height: 30)
+                        .foregroundColor(.blue.opacity(0.9))
+                }
+                .buttonStyle(PlainButtonStyle())
+            } else {
+                Button(action: {
+                    togglePlay?(channel)
+                }) {
+                    Image(systemName: isPlaying ? "pause.circle" : "play.circle")
+                        .resizable()
+                        .font(.caption)
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 30, height: 30)
-                        .foregroundColor(.blue)
+                        .foregroundColor(.blue.opacity(0.9))
                 }
                 .buttonStyle(PlainButtonStyle())
             }
-            
-            Button(action: {
-                togglePlay?(channel)
-            }) {
-                Image(systemName: isPlaying ? "pause.circle" : "play.circle")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 30, height: 30)
-                    .foregroundColor(.blue)
-            }
-            .buttonStyle(PlainButtonStyle())
         }
         .padding()
         .background(isPlaying ? Color("PlayingBackground").opacity(0.2) : Color("IdleBackground").opacity(0.5))
@@ -69,5 +72,5 @@ struct ChannelRow: View {
 }
 
 #Preview {
-    ChannelRow(channel: Channel(name: "CMR Toronto", url: URL(string: "https://live.cmr24.net/CMR/Punjabi-MQ/icecast.audio")!, meta: "INDIA"), isPlaying: false, isFavourite: false, isShowingFavouritesTab: false)
+    ChannelRow(channel: Channel(name: "CMR Toronto", url: URL(string: "https://live.cmr24.net/CMR/Punjabi-MQ/icecast.audio")!, meta: "INDIA"), isPlaying: false, isFavourite: false, isShowingFavouritesTab: true)
 }
