@@ -3,35 +3,33 @@ import Foundation
 
 struct ChannelLoader {
     static let channels: [Channel] = {
-        let userDefaultsKey = "StoredChannels"
-
-        // Try to retrieve and decode channels from UserDefaults
-        if let storedChannelsData = UserDefaults.standard.data(forKey: userDefaultsKey),
-           let storedChannels = try? JSONDecoder().decode([Channel].self, from: storedChannelsData) {
-            print("Loading channels locally")
+        switch UserDefaultsManager.shared.loadChannels() {
+        case .success(let storedChannels):
+            print("Channels loaded from UserDefaults")
             return storedChannels
-        } else {
-            // Load from JSON file if not available in UserDefaults
-            guard let url = Bundle.main.url(forResource: "channels", withExtension: "json") else {
-                print("Channels JSON file not found")
-                return []
-            }
-
-            do {
-                let data = try Data(contentsOf: url)
-                let decoder = JSONDecoder()
-                let channels = try decoder.decode([Channel].self, from: data)
-
-                // Save the newly created channels to UserDefaults
-                if let encoded = try? JSONEncoder().encode(channels) {
-                    UserDefaults.standard.set(encoded, forKey: userDefaultsKey)
-                }
-
-                return channels
-            } catch {
-                print("Error loading channels from JSON: \(error)")
-                return []
-            }
+        case .failure(let error):
+            print("Error loading channels from UserDefaults: \(error). Resetting and attempting to reload from JSON.")
+            UserDefaultsManager.shared.resetChannels()  // Reset the channels
+            return loadChannelsFromJSON() ?? []
         }
     }()
+
+    private static func loadChannelsFromJSON() -> [Channel]? {
+        guard let url = Bundle.main.url(forResource: "channels", withExtension: "json"),
+              let data = try? Data(contentsOf: url) else {
+            print("JSON file URL is nil or the file could not be read")
+            return nil
+        }
+
+        do {
+            let channels = try JSONDecoder().decode([Channel].self, from: data)
+            UserDefaultsManager.shared.saveChannels(channels)
+            print("Channels successfully decoded from JSON and saved")
+            return channels
+        } catch {
+            print("Error decoding channels from JSON: \(error)")
+            return nil
+        }
+    }
 }
+

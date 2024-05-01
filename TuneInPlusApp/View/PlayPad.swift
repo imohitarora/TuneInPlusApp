@@ -21,6 +21,8 @@ struct PlayPad: View {
     
     let isShowingFavorites: Bool
     
+    @Environment(\.scenePhase) var scenePhase
+    
     var body: some View {
         ZStack(alignment: .bottom) {
             NavigationView {
@@ -31,8 +33,8 @@ struct PlayPad: View {
                         .focused($isFocused)
                     
                     LazyVStack(spacing: 1) {
-                        ForEach(isShowingFavorites ? channelManager.favoriteChannels.filter { searchQuery.isEmpty ? true : $0.name.lowercased().contains(searchQuery.lowercased()) } : channelManager.channels.filter { searchQuery.isEmpty ? true : $0.name.lowercased().contains(searchQuery.lowercased()) }, id: \.self) { channel in
-                            ChannelRow(channel: channel, isPlaying: channelManager.currentPlayer != nil && channel == channelManager.currentPlayer ? true : false,  isFavourite: channelManager.favoriteChannels.contains(channel),  togglePlay: togglePlay, toggleFavorite: toggleFavorite)
+                        ForEach(setChannelList() , id: \.self) { channel in
+                            ChannelRow(channel: channel, isPlaying: checkPlaying(channel: channel),  isFavourite: checkFavorite(channel: channel), isShowingFavouritesTab: isShowingFavorites,  togglePlay: togglePlay, toggleFavorite: toggleFavorite)
                                 .padding(.vertical, 5)
                                 .cornerRadius(15)
                                 .shadow(color: Color("Shadow"), radius: 5, x: 0, y: 2)
@@ -74,6 +76,22 @@ struct PlayPad: View {
                 }
             }
         }
+    }
+    
+    func setChannelList() -> [Channel] {
+        if isShowingFavorites {
+            return channelManager.favoriteChannels.filter { searchQuery.isEmpty ? true : $0.name.lowercased().contains(searchQuery.lowercased()) }
+        } else {
+            return channelManager.channels.filter { searchQuery.isEmpty ? true : $0.name.lowercased().contains(searchQuery.lowercased()) }
+        }
+    }
+    
+    func checkFavorite(channel: Channel) -> Bool {
+        return channelManager.favoriteChannels.contains(channel)
+    }
+    
+    func checkPlaying(channel: Channel) -> Bool {
+        return channelManager.currentPlayer != nil && channel == channelManager.currentPlayer
     }
     
     private func toggleFavorite(for channel: Channel) {

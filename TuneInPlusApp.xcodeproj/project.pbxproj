@@ -20,6 +20,7 @@
 		C160FBFB2BDC7AE400D98571 /* PlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C160FBFA2BDC7AE400D98571 /* PlayerManager.swift */; };
 		C160FBFD2BDC7BC200D98571 /* ChannelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C160FBFC2BDC7BC100D98571 /* ChannelManager.swift */; };
 		C1FD3ABB2BE17A8F007ACE38 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FD3ABA2BE17A8F007ACE38 /* SearchBar.swift */; };
+		C1FD3ABD2BE18D84007ACE38 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1FD3ABC2BE18D84007ACE38 /* UserDefaultsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		C160FBFA2BDC7AE400D98571 /* PlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerManager.swift; sourceTree = "<group>"; };
 		C160FBFC2BDC7BC100D98571 /* ChannelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelManager.swift; sourceTree = "<group>"; };
 		C1FD3ABA2BE17A8F007ACE38 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		C1FD3ABC2BE18D84007ACE38 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 				C160FBFA2BDC7AE400D98571 /* PlayerManager.swift */,
 				C11D4DD52BDF21CB0015F674 /* ChannelLoader.swift */,
 				C160FBFC2BDC7BC100D98571 /* ChannelManager.swift */,
+				C1FD3ABC2BE18D84007ACE38 /* UserDefaultsManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				C11D4DD62BDF21CB0015F674 /* ChannelLoader.swift in Sources */,
 				C160FBF92BDC786A00D98571 /* PlaybackControls.swift in Sources */,
 				C160FBDC2BDBEA9A00D98571 /* ContentView.swift in Sources */,
+				C1FD3ABD2BE18D84007ACE38 /* UserDefaultsManager.swift in Sources */,
 				C160FBFD2BDC7BC200D98571 /* ChannelManager.swift in Sources */,
 				C160FBFB2BDC7AE400D98571 /* PlayerManager.swift in Sources */,
 				C160FBF42BDC612300D98571 /* ChannelRow.swift in Sources */,
