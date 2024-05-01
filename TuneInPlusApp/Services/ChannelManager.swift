@@ -39,23 +39,6 @@ class ChannelManager: ObservableObject {
         return appIcon
     }
     
-    func loadChannelsFromJSON() -> [Channel] {
-        guard let url = Bundle.main.url(forResource: "channels", withExtension: "json", subdirectory: "Data") else {
-            return []
-        }
-        do {
-            let data = try Data(contentsOf: url)
-            let json = try JSONSerialization.jsonObject(with: data, options: [])
-            guard let jsonArray = json as? [[String: String]] else {
-                return []
-            }
-            return jsonArray.compactMap { Channel(name: $0["name"] ?? "", url: URL(string: $0["url"] ?? "")!) }
-        } catch {
-            print("Error loading channels from JSON: \(error.localizedDescription)")
-            return []
-        }
-    }
-    
     func updateNowPlayingInfo() {
         if currentChannelIndex != -1 {
             let currentChannel = channels[currentChannelIndex]
@@ -130,17 +113,18 @@ class ChannelManager: ObservableObject {
             print("Added to favorites")
             favoriteChannels.append(channel)
         }
-        saveFavoriteChannels()
-    }
-    
-    func saveFavoriteChannels() {
-        let favoriteChannelsData = favoriteChannels.map { try? JSONEncoder().encode($0) }
-        UserDefaults.standard.set(favoriteChannelsData, forKey: "favoriteChannels")
+        UserDefaultsManager.shared.saveFavoriteChannels(favoriteChannels)
     }
     
     func loadFavoriteChannels() {
-        if let favoriteChannelsData = UserDefaults.standard.array(forKey: "favoriteChannels") as? [Data] {
-            favoriteChannels = favoriteChannelsData.compactMap { try? JSONDecoder().decode(Channel.self, from: $0) }
+        do {
+            switch UserDefaultsManager.shared.loadFavoriteChannels() {
+            case .success(let channels):
+                favoriteChannels = channels
+            case .failure(let error):
+                print("Error loading favorite channels: \(error)")
+            }
         }
     }
+    
 }

@@ -16,12 +16,12 @@ struct ChannelRow: View {
     
     var body: some View {
         HStack {
-            VStack(alignment: .leading, spacing: 5) {
+            VStack(alignment: .leading, spacing: 2) {
                 Text(channel.name)
                     .font(.headline)
                     .fontWeight(.medium)
                     .foregroundColor(.primary)
-                Text(channel.url.formatted())
+                Text(channel.meta ?? "")
                     .font(.caption2)
                     .foregroundColor(.secondary)
             }
@@ -64,5 +64,5 @@ struct ChannelRow: View {
 }
 
 #Preview {
-    ChannelRow(channel: Channel(name: "CMR Toronto", url: URL(string: "https://live.cmr24.net/CMR/Punjabi-MQ/icecast.audio")!), isPlaying: false, isFavourite: false)
+    ChannelRow(channel: Channel(name: "CMR Toronto", url: URL(string: "https://live.cmr24.net/CMR/Punjabi-MQ/icecast.audio")!, meta: "INDIA"), isPlaying: false, isFavourite: false)
 }
