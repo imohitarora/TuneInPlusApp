@@ -10,15 +10,10 @@ import AVFoundation
 
 struct PlayPad: View {
     @StateObject var audioPlayer = AudioPlayer()
-    
     @ObservedObject var channelManager = ChannelManager.shared
     
-    @State private var isFavourite = false
-    
     @State private var searchQuery = ""
-    
     @FocusState private var isFocused: Bool
-    
     let isShowingFavorites: Bool
     
     @Environment(\.scenePhase) var scenePhase
@@ -27,21 +22,38 @@ struct PlayPad: View {
         ZStack(alignment: .bottom) {
             NavigationView {
                 ScrollView(.vertical, showsIndicators: false) {
-                    SearchBar(text: $searchQuery)
-                        .padding(.horizontal, 10)
-                        .focused($isFocused)
-                        .shadow(color: Color("Shadow"), radius: 2, x: 0, y: 2)
-                    
-                    LazyVStack(spacing: 1) {
-                        ForEach(setChannelList() , id: \.self) { channel in
-                            ChannelRow(channel: channel, isPlaying: checkPlaying(channel: channel),  isFavourite: checkFavorite(channel: channel), isShowingFavouritesTab: isShowingFavorites,  togglePlay: togglePlay, toggleFavorite: toggleFavorite)
-                                .padding(.vertical, 3)
-                                .cornerRadius(15)
-                                .shadow(color: Color("Shadow"), radius: 3, x: 0, y: 2)
+                    ScrollViewReader { scrollProxy in
+                        VStack {
+                            SearchBar(text: $searchQuery)
+                                .padding(.horizontal, 10)
+                                .focused($isFocused)
+                                .shadow(color: Color("Shadow"), radius: 2, x: 0, y: 2)
+                            
+                            LazyVStack(spacing: 1) {
+                                ForEach(setChannelList(), id: \.self) { channel in
+                                    ChannelRow(channel: channel,
+                                               isPlaying: checkPlaying(channel: channel),
+                                               isFavourite: checkFavorite(channel: channel),
+                                               isShowingFavouritesTab: isShowingFavorites,
+                                               togglePlay: togglePlay,
+                                               toggleFavorite: toggleFavorite)
+                                    .padding(.vertical, 3)
+                                    .cornerRadius(15)
+                                    .shadow(color: Color("Shadow"), radius: 3, x: 0, y: 2)
+                                    .id(channel.name)
+                                }
+                            }
+                            .padding(.horizontal, 10)
+                            .background(Color("Background"))
+                        }
+                        .onChange(of: scenePhase) {
+                            if scenePhase == .active {
+                                if let currentPlayer = channelManager.currentPlayer {
+                                    scrollProxy.scrollTo(currentPlayer.name, anchor: .center)
+                                }
+                            }
                         }
                     }
-                    .padding(.horizontal, 10)
-                    .background(Color("Background"))
                 }
                 .onAppear {
                     channelManager.loadFavoriteChannels()
@@ -61,7 +73,7 @@ struct PlayPad: View {
                 withAnimation(.easeInOut) {
                     PlaybackControls(
                         isPlaying: channelManager.isPlaying,
-                        isFavourite: (channelManager.currentPlayer != nil) ? channelManager.favoriteChannels.contains(channelManager.currentPlayer!) : false,
+                        isFavourite: channelManager.currentPlayer.map(channelManager.favoriteChannels.contains) ?? false,
                         currentChannel: channelManager.currentPlayer,
                         playPauseAction: {
                             togglePlay(for: channelManager.currentPlayer!)
@@ -105,8 +117,8 @@ struct PlayPad: View {
             }
         }
     }
-
-
+    
+    
     
     func checkFavorite(channel: Channel) -> Bool {
         return channelManager.favoriteChannels.contains(channel)
