@@ -49,8 +49,11 @@ class ChannelManager: ObservableObject {
                 MPMediaItemPropertyTitle: currentChannel.name,
                 MPMediaItemPropertyArtist: currentChannel.url, // Update with actual artist name
                 MPNowPlayingInfoPropertyPlaybackRate: 1.0,
-                MPNowPlayingInfoPropertyIsLiveStream: true
+                MPNowPlayingInfoPropertyIsLiveStream: true                
             ]
+            
+            let commandCenter = MPRemoteCommandCenter.shared()
+            commandCenter.likeCommand.isActive = checkFavorite()
         } else {
             nowPlayingInfo.nowPlayingInfo = [
                 MPMediaItemPropertyTitle: "No Channel Selected",
@@ -58,6 +61,9 @@ class ChannelManager: ObservableObject {
                 MPNowPlayingInfoPropertyPlaybackRate: 1.0,
                 MPNowPlayingInfoPropertyIsLiveStream: true
             ]
+            
+            let commandCenter = MPRemoteCommandCenter.shared()
+            commandCenter.likeCommand.isEnabled = false
         }
     }
     
@@ -114,6 +120,7 @@ class ChannelManager: ObservableObject {
             favoriteChannels.append(channel)
         }
         UserDefaultsManager.shared.saveFavoriteChannels(favoriteChannels)
+        updateNowPlayingInfo()
     }
     
     func loadFavoriteChannels() {
@@ -127,4 +134,7 @@ class ChannelManager: ObservableObject {
         }
     }
     
+    func checkFavorite() -> Bool {
+        return currentPlayer != nil ? favoriteChannels.contains(currentPlayer!) : false
+    }
 }

@@ -53,11 +53,7 @@ struct TuneInPlusApp: App {
             return .success
         }
         commandCenter.likeCommand.addTarget { _ in
-            // Handle like command
-            return .success
-        }
-        commandCenter.dislikeCommand.addTarget { _ in
-            // Handle dislike command
+            channelManager.toggleFavorite(channel: channelManager.channels[channelManager.currentChannelIndex])
             return .success
         }
     }

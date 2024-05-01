@@ -29,13 +29,13 @@ struct PlayPad: View {
                 ScrollView(.vertical, showsIndicators: false) {
                     SearchBar(text: $searchQuery)
                         .padding(.horizontal)
-                        .padding(.top)
+//                        .padding(.top)
                         .focused($isFocused)
                     
                     LazyVStack(spacing: 1) {
                         ForEach(setChannelList() , id: \.self) { channel in
                             ChannelRow(channel: channel, isPlaying: checkPlaying(channel: channel),  isFavourite: checkFavorite(channel: channel), isShowingFavouritesTab: isShowingFavorites,  togglePlay: togglePlay, toggleFavorite: toggleFavorite)
-                                .padding(.vertical, 5)
+                                .padding(.vertical, 3)
                                 .cornerRadius(15)
                                 .shadow(color: Color("Shadow"), radius: 5, x: 0, y: 2)
                         }
@@ -51,13 +51,13 @@ struct PlayPad: View {
                         isFocused = false
                     }
                 }
-                .padding(.bottom, channelManager.isPlaying ? 70 : 0)
+                .padding(.bottom, channelManager.isPlaying ? 60 : 0)
                 .navigationTitle("Radio Channels")
                 .navigationBarTitleDisplayMode(.large)
                 .background(Color("Background").edgesIgnoringSafeArea(.all))
             }
+            Spacer()
             if channelManager.isPlaying {
-                Spacer()
                 withAnimation(.easeInOut) {
                     PlaybackControls(
                         isPlaying: channelManager.isPlaying,
@@ -72,7 +72,8 @@ struct PlayPad: View {
                     )
                     .frame(maxWidth: .infinity)
                     .background(Color("Background"))
-                    .shadow(color: Color("Shadow"), radius: 5, x: 0, y: 2)
+                    .border(.gray.opacity(0.2))
+//                    .shadow(color: Color("Shadow"), radius: 5, x: 0, y: 2)
                 }
             }
         }
@@ -80,11 +81,33 @@ struct PlayPad: View {
     
     func setChannelList() -> [Channel] {
         if isShowingFavorites {
-            return channelManager.favoriteChannels.filter { searchQuery.isEmpty ? true : $0.name.lowercased().contains(searchQuery.lowercased()) }
+            return channelManager.favoriteChannels.filter { channel in
+                // Check if search query is empty or the name contains the query
+                if searchQuery.isEmpty || channel.name.lowercased().contains(searchQuery.lowercased()) {
+                    return true
+                }
+                // Safely unwrap `meta` and check if it contains the query
+                if let meta = channel.meta?.lowercased(), meta.contains(searchQuery.lowercased()) {
+                    return true
+                }
+                return false
+            }
         } else {
-            return channelManager.channels.filter { searchQuery.isEmpty ? true : $0.name.lowercased().contains(searchQuery.lowercased()) }
+            return channelManager.channels.filter { channel in
+                // Check if search query is empty or the name contains the query
+                if searchQuery.isEmpty || channel.name.lowercased().contains(searchQuery.lowercased()) {
+                    return true
+                }
+                // Safely unwrap `meta` and check if it contains the query
+                if let meta = channel.meta?.lowercased(), meta.contains(searchQuery.lowercased()) {
+                    return true
+                }
+                return false
+            }
         }
     }
+
+
     
     func checkFavorite(channel: Channel) -> Bool {
         return channelManager.favoriteChannels.contains(channel)
