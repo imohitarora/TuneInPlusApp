@@ -28,19 +28,19 @@ struct PlayPad: View {
             NavigationView {
                 ScrollView(.vertical, showsIndicators: false) {
                     SearchBar(text: $searchQuery)
-                        .padding(.horizontal)
-//                        .padding(.top)
+                        .padding(.horizontal, 10)
                         .focused($isFocused)
+                        .shadow(color: Color("Shadow"), radius: 2, x: 0, y: 2)
                     
                     LazyVStack(spacing: 1) {
                         ForEach(setChannelList() , id: \.self) { channel in
                             ChannelRow(channel: channel, isPlaying: checkPlaying(channel: channel),  isFavourite: checkFavorite(channel: channel), isShowingFavouritesTab: isShowingFavorites,  togglePlay: togglePlay, toggleFavorite: toggleFavorite)
                                 .padding(.vertical, 3)
                                 .cornerRadius(15)
-                                .shadow(color: Color("Shadow"), radius: 5, x: 0, y: 2)
+                                .shadow(color: Color("Shadow"), radius: 3, x: 0, y: 2)
                         }
                     }
-                    .padding(.horizontal)
+                    .padding(.horizontal, 10)
                     .background(Color("Background"))
                 }
                 .onAppear {
@@ -73,7 +73,6 @@ struct PlayPad: View {
                     .frame(maxWidth: .infinity)
                     .background(Color("Background"))
                     .border(.gray.opacity(0.2))
-//                    .shadow(color: Color("Shadow"), radius: 5, x: 0, y: 2)
                 }
             }
         }
@@ -142,3 +141,6 @@ struct PlayPad: View {
     }
 }
 
+#Preview {
+    ContentView(audioPlayer: AudioPlayer())
+}
