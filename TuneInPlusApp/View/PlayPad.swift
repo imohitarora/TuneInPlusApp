@@ -58,13 +58,8 @@ struct PlayPad: View {
                 .onAppear {
                     channelManager.loadFavoriteChannels()
                 }
-                .onChange(of: searchQuery) {
-                    if searchQuery.isEmpty {
-                        isFocused = false
-                    }
-                }
                 .padding(.bottom, channelManager.isPlaying ? 60 : 0)
-                .navigationTitle("Radio Channels")
+                .navigationTitle(!isShowingFavorites ? "Radio Channels" : "My Channels")
                 .navigationBarTitleDisplayMode(.large)
                 .background(Color("Background").edgesIgnoringSafeArea(.all))
             }

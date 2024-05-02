@@ -10,7 +10,8 @@ import AVFoundation
 
 struct ContentView: View {
     @StateObject var audioPlayer: AudioPlayer
-    
+    @ObservedObject var viewModel = ChannelManager.shared
+
     var body: some View {
         TabView {
             PlayPad(audioPlayer: audioPlayer, isShowingFavorites: false) // Pass the binding
@@ -20,6 +21,10 @@ struct ContentView: View {
             PlayPad(audioPlayer: audioPlayer, isShowingFavorites: true) // Pass the binding
                 .tabItem {
                     Label("Favourites", systemImage: "heart")
+                }
+            SleepOptionsView()
+                .tabItem {
+                    Label("Sleep", systemImage: viewModel.selectedOption == nil ? "moon.stars" : "moon.zzz")
                 }
         }
     }

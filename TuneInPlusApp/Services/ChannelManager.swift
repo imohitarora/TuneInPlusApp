@@ -8,6 +8,7 @@
 import Foundation
 import AVFoundation
 import MediaPlayer
+import Combine
 
 
 class ChannelManager: ObservableObject {
@@ -24,6 +25,15 @@ class ChannelManager: ObservableObject {
     @Published var favoriteChannels: [Channel] = []
     
     @Published var isPlaying = false
+    
+    @Published var selectedOption: Int? = nil {
+        didSet {
+            resetTimer()
+        }
+    }
+    
+    private var timer: Timer?
+    
     
     let nowPlayingInfo = MPNowPlayingInfoCenter.default()
     
@@ -49,7 +59,7 @@ class ChannelManager: ObservableObject {
                 MPMediaItemPropertyTitle: currentChannel.name,
                 MPMediaItemPropertyArtist: currentChannel.url, // Update with actual artist name
                 MPNowPlayingInfoPropertyPlaybackRate: 1.0,
-                MPNowPlayingInfoPropertyIsLiveStream: true                
+                MPNowPlayingInfoPropertyIsLiveStream: true
             ]
             
             let commandCenter = MPRemoteCommandCenter.shared()
@@ -87,10 +97,21 @@ class ChannelManager: ObservableObject {
     }
     
     func stopPlayback() {
-        audioPlayer.stop()
-        isPlaying = false
-        currentPlayer = nil
-        // Add the following lines to stop playback in background
+        // Stop the player if it is currently playing
+        if isPlaying {
+            audioPlayer.stop()
+            isPlaying = false
+            print("Playback stopped.")
+        } else {
+            print("No playback to stop.")
+        }
+
+        // Clear the current player only if necessary
+        if currentPlayer != nil {
+            currentPlayer = nil
+            print("Cleared the current player.")
+        }
+
         do {
             try AVAudioSession.sharedInstance().setActive(false)
         } catch {
@@ -136,5 +157,36 @@ class ChannelManager: ObservableObject {
     
     func checkFavorite() -> Bool {
         return currentPlayer != nil ? favoriteChannels.contains(currentPlayer!) : false
+    }
+    
+    func resetTimer() {
+        // Invalidate the current timer if it exists
+        timer?.invalidate()
+        print("Existing timer invalidated")
+        
+        // Set up a new timer if a valid option is selected
+        if let interval = selectedOption {
+            print("Setting up a timer for \(interval * 15) minutes")
+            timer = Timer.scheduledTimer(withTimeInterval: TimeInterval(interval * 15 * 60), repeats: false) { [weak self] _ in
+                self?.timerAction()
+            }
+        } else {
+            print("No valid interval selected; no timer set.")
+        }
+    }
+    
+    private func timerAction() {
+        // Perform the action after the timer completes
+        print("Timer completed for \(selectedOption ?? 0) minutes.")
+        stopPlayback()
+        DispatchQueue.main.async {
+            self.selectedOption = nil // Reset the selection once the timer completes
+        }
+    }
+    
+    deinit {
+        // Make sure to invalidate the timer when this object is deallocated
+        timer?.invalidate()
+        print("Timer invalidated on deinit")
     }
 }

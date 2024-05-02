@@ -75,11 +75,6 @@
         "meta": "INDIA-PUNJABI"
     },
     {
-        "name": "Radio Central 24",
-        "url": "https://casper.radioca.st/;",
-        "meta": "UK-BRITAIN-IRELAND-ENGLISH-PUNJABI-URDU"
-    },
-    {
         "name": "Radio Punjab USA",
         "url": "https://s5.voscast.com:9281/stream",
         "meta": "INDIA-PUNJABI"
@@ -92,7 +87,7 @@
     {
         "name": "Sadda Radio",
         "url": "https://ais-edge106-live365-dal02.cdnstream.com/a18446",
-        "meta": "INDIA-PUNJABI"
+        "meta": "USA-PUNJABI"
     },
     {
         "name": "Air Vividh Bharti",
@@ -108,11 +103,6 @@
         "name": "Radio City",
         "url": "https://prclive4.listenon.in/Hindi",
         "meta": "INDIA-MUMBAI-HINDI"
-    },
-    {
-        "name": "Ishq FM",
-        "url": "https://prclive4.listenon.in/Ishq",
-        "meta": "INDIA-HINDI"
     },
     {
         "name": "Punjabi FM",
@@ -147,7 +137,7 @@
     {
         "name": "Apna 990 AM",
         "url": "https://ais-nzme.streamguys1.com/nz_145_aac",
-        "meta": "INDIA-HINDI"
+        "meta": "AUCKLANKD-NZ"
     },
     {
         "name": "Arijit Singh",
@@ -370,7 +360,7 @@
         "meta": "INDIA-HINDI"
     },
     {
-        "name": "Radio Central 24",
+        "name": "Radio 24 Central",
         "url": "https://philae.shoutca.st/tunein/casper.pls",
         "meta": "UK-IRELAND-ENGLISH-HINDI-URDU"
     },

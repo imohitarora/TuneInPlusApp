@@ -75,11 +75,6 @@
         "meta": "INDIA-PUNJABI"
     },
     {
-        "name": "Radio Central 24",
-        "url": "https://casper.radioca.st/;",
-        "meta": "UK-BRITAIN-IRELAND-ENGLISH-PUNJABI-URDU"
-    },
-    {
         "name": "Radio Punjab USA",
         "url": "https://s5.voscast.com:9281/stream",
         "meta": "INDIA-PUNJABI"
@@ -365,7 +360,7 @@
         "meta": "INDIA-HINDI"
     },
     {
-        "name": "Radio Central 24",
+        "name": "Radio 24 Central",
         "url": "https://philae.shoutca.st/tunein/casper.pls",
         "meta": "UK-IRELAND-ENGLISH-HINDI-URDU"
     },
