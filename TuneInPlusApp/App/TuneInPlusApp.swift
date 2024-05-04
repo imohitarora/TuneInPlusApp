@@ -37,7 +37,7 @@ struct TuneInPlusApp: App {
         // Handle remote commands
         let commandCenter = MPRemoteCommandCenter.shared()
         commandCenter.playCommand.addTarget { _ in
-            channelManager.startPlayback(for: channelManager.channels[channelManager.currentChannelIndex])
+            channelManager.startPlayback(for: channelManager.currentPlaylist[channelManager.currentChannelIndex])
             return .success
         }
         commandCenter.pauseCommand.addTarget { _ in
@@ -53,7 +53,7 @@ struct TuneInPlusApp: App {
             return .success
         }
         commandCenter.likeCommand.addTarget { _ in
-            channelManager.toggleFavorite(channel: channelManager.channels[channelManager.currentChannelIndex])
+            channelManager.toggleFavorite(channel: channelManager.currentPlaylist[channelManager.currentChannelIndex])
             return .success
         }
     }

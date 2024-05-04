@@ -132,8 +132,10 @@ struct PlayPad: View {
         if channelManager.currentPlayer == channel && channelManager.isPlaying {
             channelManager.stopPlayback()
         } else {
-            if let index = channelManager.channels.firstIndex(of: channel) {
-                channelManager.currentChannelIndex = index
+            if isShowingFavorites {
+                channelManager.currentPlaylist = channelManager.favoriteChannels
+            } else {
+                channelManager.currentPlaylist = channelManager.channels
             }
             channelManager.startPlayback(for: channel)
         }

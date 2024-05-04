@@ -41,6 +41,7 @@ class ChannelManager: ObservableObject {
         loadAndSortChannels()
     }
     
+    var currentPlaylist : [Channel] = []
     
     func GetAppIcon() -> UIImage {
         var appIcon: UIImage! {
@@ -55,7 +56,7 @@ class ChannelManager: ObservableObject {
     
     func updateNowPlayingInfo() {
         if currentChannelIndex != -1 {
-            let currentChannel = channels[currentChannelIndex]
+            let currentChannel = currentPlaylist[currentChannelIndex]
             nowPlayingInfo.nowPlayingInfo = [
                 MPMediaItemPropertyArtwork: MPMediaItemArtwork(boundsSize: CGSize(width: 80, height: 80)) { size in
                     return self.GetAppIcon()
@@ -88,9 +89,10 @@ class ChannelManager: ObservableObject {
         audioPlayer.play()
         isPlaying = true
         currentPlayer = channel
-        
+        if let index = currentPlaylist.firstIndex(of: channel) {
+            currentChannelIndex = index
+        }
         updateNowPlayingInfo()
-        
         // Add the following lines to start playback in background
         do {
             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
@@ -124,14 +126,14 @@ class ChannelManager: ObservableObject {
     }
     
     func nextChannel() {
-        currentChannelIndex = (currentChannelIndex + 1) % channels.count
-        startPlayback(for: channels[currentChannelIndex])
+        currentChannelIndex = (currentChannelIndex + 1) % currentPlaylist.count
+        startPlayback(for: currentPlaylist[currentChannelIndex])
         updateNowPlayingInfo()
     }
     
     func previousChannel() {
-        currentChannelIndex = (currentChannelIndex - 1 + channels.count) % channels.count
-        startPlayback(for: channels[currentChannelIndex])
+        currentChannelIndex = (currentChannelIndex - 1 + currentPlaylist.count) % currentPlaylist.count
+        startPlayback(for: currentPlaylist[currentChannelIndex])
         updateNowPlayingInfo()
     }
     
