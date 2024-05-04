@@ -37,6 +37,10 @@ class ChannelManager: ObservableObject {
     
     let nowPlayingInfo = MPNowPlayingInfoCenter.default()
     
+    init() {
+        loadAndSortChannels()
+    }
+    
     
     func GetAppIcon() -> UIImage {
         var appIcon: UIImage! {
@@ -188,5 +192,23 @@ class ChannelManager: ObservableObject {
         // Make sure to invalidate the timer when this object is deallocated
         timer?.invalidate()
         print("Timer invalidated on deinit")
+    }
+    
+    private func loadAndSortChannels() {
+        // Assuming ChannelLoader.channels loads unsorted channels
+        let unsortedChannels = ChannelLoader.channels
+        let userCountryCode = Locale.current.region?.identifier.lowercased() ?? ""
+
+        channels = unsortedChannels.sorted {
+            let isLocale0 = $0.country.lowercased() == userCountryCode
+            let isLocale1 = $1.country.lowercased() == userCountryCode
+            if isLocale0 && !isLocale1 {
+                return true
+            } else if !isLocale0 && isLocale1 {
+                return false
+            } else {
+                return $0.name < $1.name
+            }
+        }
     }
 }

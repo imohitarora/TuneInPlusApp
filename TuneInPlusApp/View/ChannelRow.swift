@@ -24,10 +24,14 @@ struct ChannelRow: View {
                     .textCase(.uppercase)
                     .fontWeight(.medium)
                     .foregroundColor(.primary)
-                Text(channel.meta ?? "")
-                    .lineLimit(1)
-                    .font(.caption2)
-                    .foregroundColor(.secondary)
+                HStack {
+                    Text("(\(channel.country.trimmingCharacters(in: .whitespaces))) -")
+                    Text(channel.meta?.trimmingCharacters(in: .whitespaces) ?? "")
+                }
+                .lineLimit(1)
+                .font(.caption2)
+                .foregroundColor(.secondary)
+                
             }
             .onTapGesture {
                 togglePlay?(channel)

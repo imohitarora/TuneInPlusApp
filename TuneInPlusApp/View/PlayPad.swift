@@ -97,8 +97,6 @@ struct PlayPad: View {
                     return true
                 }
                 return false
-            }.sorted {
-                $0.
             }
         } else {
             return channelManager.channels.filter { channel in
