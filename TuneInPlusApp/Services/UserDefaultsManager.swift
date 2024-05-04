@@ -66,7 +66,7 @@ struct UserDefaultsManager {
                 if let jsonChannels = jsonArray as? [[String: Any]] {
                     var newChannels: [Channel] = []
                     for jsonChannel in jsonChannels {
-                        if let name = jsonChannel["name"] as? String, let channel = ChannelManager.shared.channels.first(where: { $0.name == name }) {
+                        if let url = jsonChannel["url"] as? String, let channel = ChannelManager.shared.channels.first(where: { $0.url.absoluteString.lowercased() == url.lowercased() }) {
                             newChannels.append(channel)
                         }
                     }

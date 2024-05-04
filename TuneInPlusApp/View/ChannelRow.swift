@@ -71,6 +71,7 @@ struct ChannelRow: View {
     }
 }
 
+
 #Preview {
-    ChannelRow(channel: Channel(name: "CMR Toronto", url: URL(string: "https://live.cmr24.net/CMR/Punjabi-MQ/icecast.audio")!, meta: "INDIA"), isPlaying: false, isFavourite: false, isShowingFavouritesTab: true)
+    ChannelRow(channel: Channel(id: "3a8156f0-f829-489f-b506-2aab705aa7f5", name: "CMR Toronto", url: URL(string: "https://live.cmr24.net/CMR/Punjabi-MQ/icecast.audio")!, country: "IN", meta: "INDIA"), isPlaying: false, isFavourite: false, isShowingFavouritesTab: true)
 }

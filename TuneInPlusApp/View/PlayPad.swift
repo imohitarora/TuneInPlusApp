@@ -40,7 +40,7 @@ struct PlayPad: View {
                                     .padding(.vertical, 3)
                                     .cornerRadius(15)
                                     .shadow(color: Color("Shadow"), radius: 3, x: 0, y: 2)
-                                    .id(channel.name)
+                                    .id(channel.id)
                                 }
                             }
                             .padding(.horizontal, 10)
@@ -49,7 +49,7 @@ struct PlayPad: View {
                         .onChange(of: scenePhase) {
                             if scenePhase == .active {
                                 if let currentPlayer = channelManager.currentPlayer {
-                                    scrollProxy.scrollTo(currentPlayer.name, anchor: .center)
+                                    scrollProxy.scrollTo(currentPlayer.id, anchor: .center)
                                 }
                             }
                         }
@@ -97,6 +97,8 @@ struct PlayPad: View {
                     return true
                 }
                 return false
+            }.sorted {
+                $0.
             }
         } else {
             return channelManager.channels.filter { channel in

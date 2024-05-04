@@ -16,6 +16,14 @@ struct SearchBar: View {
                 .foregroundColor(.gray)
             TextField("Search", text: $text)
                 .foregroundColor(.primary)
+            if !text.isEmpty {
+                Button(action: {
+                    text = ""
+                }) {
+                    Image(systemName: "multiply.circle.fill")
+                        .foregroundColor(.gray)
+                }
+            }
         }
         .padding(.vertical, 8)
         .padding(.horizontal, 16)
