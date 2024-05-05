@@ -1,16 +1,9 @@
 [
   {
-    "id": "5f3701e9-3403-4a81-b6aa-5504c1da210c",
-    "name": "Aakashvani",
-    "url": "https://audio-edge-fvq45.ams.d.radiomast.io/3ccc1156-fcf8-4ba7-9a0c-28e3a465e1ae?listening-from-radio-garden=1607152226837",
-    "country": "IN",
-    "meta": "HINDI"
-  },
-  {
     "id": "742f6e7f-6f72-4810-841d-8b5dd13091c2",
     "name": "Red Fm Calgary 106.7 Fm",
     "url": "https://ice10.securenetsystems.net/CKYR",
-    "country": "IN",
+    "country": "CA",
     "meta": "PUNJABI"
   },
   {
@@ -22,17 +15,10 @@
   },
   {
     "id": "f0884929-db78-46a6-9671-61ffdfb1a61b",
-    "name": "Hitsbollywood",
+    "name": "Hits Bollywood",
     "url": "https://node-14.zeno.fm/rqqps6cbe3quv?rj-ttl=5&rj-tok=AAABccQyYG8AGJ3KW_903AafBw",
     "country": "IN",
     "meta": "HINDI"
-  },
-  {
-    "id": "65632e6c-f19f-49cf-b38d-5797a1fec930",
-    "name": "Live Kirtan Sri Harmandir Sahib",
-    "url": "https://live.sgpc.net:8443/;nocache=889869",
-    "country": "IN",
-    "meta": "PUNJABI"
   },
   {
     "id": "4bae6661-80da-4edf-9afb-34bf6e06d0b7",
@@ -47,13 +33,6 @@
     "url": "https://drive.uber.radio/uber/bollywoodnow/icecast.audio",
     "country": "IN",
     "meta": "HINDI"
-  },
-  {
-    "id": "70940872-1f72-489c-835b-94bb4c919d43",
-    "name": "Hand Of Jesus - Punjabi",
-    "url": "https://dc1.serverse.com/proxy/hojpunjabi/stream",
-    "country": "IN",
-    "meta": "PUNJABI"
   },
   {
     "id": "4088a674-566b-4a6e-9712-0fee910cfc5a",
@@ -150,7 +129,7 @@
     "id": "b4776fcc-74d9-4d47-a5d6-ba1eb4f587e8",
     "name": "Red Fm Vancouver 89.1 Fm / 93.1 Fm",
     "url": "https://ice24.securenetsystems.net/CKYE",
-    "country": "IN",
+    "country": "CA",
     "meta": "PUNJABI"
   },
   {
@@ -178,7 +157,7 @@
     "id": "3c602e0a-c718-4ac7-be60-b77919a50533",
     "name": "Mirchi One 89.6 Qatar / Nc, Usa",
     "url": "https://streams.radio.co/s8d06d0298/listen",
-    "country": "IN",
+    "country": "QA",
     "meta": "HINDI"
   },
   {
@@ -215,20 +194,6 @@
     "url": "https://desi.canstream.co.uk:8001/live.mp3",
     "country": "IN",
     "meta": "PUNJABI"
-  },
-  {
-    "id": "80930c69-14e4-4d29-b71f-a836620b9e8d",
-    "name": "Air Shimhapuri Kakupalli Fm",
-    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio168/playlist.m3u8",
-    "country": "IN",
-    "meta": "HINDI-TELUGU"
-  },
-  {
-    "id": "b7bf9005-cb1d-4734-b7cd-8c3df6de1346",
-    "name": "Air Sasaram",
-    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio075/playlist.m3u8",
-    "country": "IN",
-    "meta": "BIHARI-ENGLISH-HINDI"
   },
   {
     "id": "e4e3ea80-c4e7-4cd3-bc1a-ae35367a1036",
@@ -311,27 +276,13 @@
     "id": "c0d100f5-4b6f-4c4e-811f-6b66e8ca8c8b",
     "name": "Red Fm Toronto 88.9 Fm",
     "url": "https://ice9.securenetsystems.net/CIRVFM",
-    "country": "IN",
+    "country": "CA",
     "meta": "PUNJABI"
-  },
-  {
-    "id": "f1623eb0-9a9a-4c53-b6af-93739128ba16",
-    "name": "Air Prayagraj",
-    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio125/playlist.m3u8",
-    "country": "IN",
-    "meta": "HINDI"
   },
   {
     "id": "3fac7561-ff5a-4d2d-b5fd-f961f544dde7",
     "name": "Best Fm",
     "url": "https://radio.mbconline.xyz/hls/bestfm.m3u8",
-    "country": "IN",
-    "meta": "HINDI"
-  },
-  {
-    "id": "739b2415-fc66-4f5f-a406-524ef3a42681",
-    "name": "Air Almora",
-    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio122/playlist.m3u8",
     "country": "IN",
     "meta": "HINDI"
   },
@@ -348,13 +299,6 @@
     "url": "https://stream.zeno.fm/bauwkrnqhxhvv",
     "country": "IN",
     "meta": "HINDI"
-  },
-  {
-    "id": "feaf6d61-20d3-431c-8ff4-97ab5964db3e",
-    "name": "Sri Harmandir Sahib Live Kirtan",
-    "url": "https://radio.sikhnet.com/proxy/channel9/live",
-    "country": "IN",
-    "meta": "PUNJABI"
   },
   {
     "id": "5f670af3-229e-4245-9422-1508e7c49b32",
@@ -385,17 +329,10 @@
     "meta": "HINDI"
   },
   {
-    "id": "08868ce6-4f2b-48f7-bd00-f6a6c372b37d",
-    "name": "Live Kirtan Sri Harmandir Sahib",
-    "url": "https://live.sgpc.net:8443/;nocache=889896",
-    "country": "IN",
-    "meta": "PUNJABI"
-  },
-  {
     "id": "f8000ed0-2260-4316-809e-fe70fc8c5f03",
     "name": "Lotus Fm",
     "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/LOTUSFM_SC",
-    "country": "IN",
+    "country": "ZA",
     "meta": "HINDI"
   },
   {
@@ -404,13 +341,6 @@
     "url": "https://edge.iono.fm/xice/129_medium.aac",
     "country": "IN",
     "meta": "HINDI"
-  },
-  {
-    "id": "b66eb0a1-10c4-4504-87af-b2bacbac4e58",
-    "name": "Air Bhadravati",
-    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio211/playlist.m3u8",
-    "country": "IN",
-    "meta": "ENGLISH-HINDI-KANNADA"
   },
   {
     "id": "7f51fa18-17d0-49de-a23a-e46b28797f23",
@@ -430,13 +360,6 @@
     "id": "04660aec-e76a-45af-a1f4-a2583b39518d",
     "name": "Fm Rainbow Mumbai",
     "url": "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio008/hlspbaudio008_Auto.m3u8",
-    "country": "IN",
-    "meta": "HINDI"
-  },
-  {
-    "id": "b9078dfd-fa88-4c62-bf43-5308e057cad7",
-    "name": "Air Bhopal",
-    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio212/chunklist.m3u8",
     "country": "IN",
     "meta": "HINDI"
   },
@@ -474,13 +397,6 @@
     "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/SP_R4467890_SC",
     "country": "IN",
     "meta": "PUNJABI"
-  },
-  {
-    "id": "8c8696dd-26d9-416f-bf95-a48366aabd2f",
-    "name": "Air Agra",
-    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio059/playlist.m3u8",
-    "country": "IN",
-    "meta": "HINDI"
   },
   {
     "id": "50b15a24-4617-48f4-b94e-30ca430d05c2",
@@ -521,7 +437,7 @@
     "id": "e9e52a43-78ba-4ad7-bf4c-fbc25469348c",
     "name": "Awaz Fm",
     "url": "https://uksoutha.streaming.broadcast.radio/awazfm",
-    "country": "IN",
+    "country": "UK",
     "meta": "HINDI"
   },
   {
@@ -570,21 +486,14 @@
     "id": "25449d5b-482f-4616-bd5d-ed9eb882d9f2",
     "name": "Krpi Ferndale 1550 Am",
     "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/KRPIAM_SC",
-    "country": "IN",
+    "country": "US",
     "meta": "PUNJABI"
-  },
-  {
-    "id": "042a5b41-1604-4ba9-8c35-0efa02066dc5",
-    "name": "Air Fm Rainbow Delhi",
-    "url": "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio004/hlspbaudio004_Auto.m3u8",
-    "country": "IN",
-    "meta": "HINDI"
   },
   {
     "id": "62b4690d-c4c2-43d6-8a0b-d97445fde445",
     "name": "Ujala Radio",
     "url": "https://stream.ujala.nl/ujala",
-    "country": "IN",
+    "country": "NL",
     "meta": "HINDI"
   },
   {
@@ -658,13 +567,6 @@
     "meta": "PUNJABI"
   },
   {
-    "id": "68d00a44-200c-4c82-b17f-18d777f3b2ee",
-    "name": "Air Vividh Bharti",
-    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio001/playlist.m3u8",
-    "country": "IN",
-    "meta": "HINDI"
-  },
-  {
     "id": "37b729d1-4e04-4a51-aea8-f5f517a3d469",
     "name": "Kishore Kumar Radio",
     "url": "https://stream-48.zeno.fm/0ghtfp8ztm0uv?zs=Kr_rJK1kSsKPKeUo9zgTxw&rj-ttl=5&rj-tok=AAABefQSIpIAGxcgV3Wv5gK8Kg",
@@ -714,13 +616,6 @@
     "meta": "BENGALI-ENGLISH-HINDI-URDU"
   },
   {
-    "id": "27aead2d-bb52-46ef-a2e7-ff138d911d7d",
-    "name": "Fm Air Bhatinda",
-    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio117/playlist.m3u8",
-    "country": "IN",
-    "meta": "PUNJABI"
-  },
-  {
     "id": "53e1a910-fb05-4d22-9a1c-575ca771e0d8",
     "name": "60s Forever",
     "url": "https://stream.zeno.fm/btrks671ynhvv",
@@ -733,13 +628,6 @@
     "url": "https://stream.zeno.fm/2uh6hkmzdzzuv",
     "country": "IN",
     "meta": "HINDI"
-  },
-  {
-    "id": "6b17e3b9-a93e-43fe-8943-334027c97e0e",
-    "name": "Air Punjabi",
-    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio138/playlist.m3u8",
-    "country": "IN",
-    "meta": "PUNJABI"
   },
   {
     "id": "58ea504f-f8df-4fd2-8220-cecd462da4ec",
@@ -784,27 +672,6 @@
     "meta": "HINDI"
   },
   {
-    "id": "48aade73-fc35-4f50-b9bc-ccfea833e74a",
-    "name": "Radio Gyanbh Air Av",
-    "url": "https://sonic.onlineaudience.co.uk/8086/stream",
-    "country": "IN",
-    "meta": "HINDI"
-  },
-  {
-    "id": "8b8e75b3-01a2-423d-b666-59b7f358e652",
-    "name": "Fm Air Lucknow",
-    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio046/playlist.m3u8",
-    "country": "IN",
-    "meta": "HINDI"
-  },
-  {
-    "id": "5baa918a-01b6-4231-abab-9f8f9cfefb2f",
-    "name": "Gurbani Kirtan",
-    "url": "https://gurbanikirtan.radioca.st/start.mp3",
-    "country": "IN",
-    "meta": "PUNJABI"
-  },
-  {
     "id": "f41fb55b-fe83-4432-ada3-51463b439844",
     "name": "Taj 92.3 Fm",
     "url": "https://ice66.securenetsystems.net/TAJ",
@@ -843,7 +710,7 @@
     "id": "f93276cc-5c5d-4000-8587-2b7a3b89ec9c",
     "name": "Indianlink Radio",
     "url": "https://indianlink1.radioca.st/;",
-    "country": "IN",
+    "country": "AU",
     "meta": "HINDI"
   },
   {
@@ -885,14 +752,14 @@
     "id": "c5da7379-b3aa-475b-bd2c-15ca6bc62eeb",
     "name": "Apna 990 Am",
     "url": "https://ais-nzme.streamguys1.com/nz_145_aac",
-    "country": "IN",
+    "country": "NZ",
     "meta": "HINDI"
   },
   {
     "id": "f2790bcb-d296-4b97-8905-65482f893c89",
     "name": "Spice Radio Toronto",
     "url": "https://spiceradioca1.radioca.st/stream",
-    "country": "IN",
+    "country": "CA",
     "meta": "HINDI"
   },
   {
@@ -962,7 +829,7 @@
     "id": "76b94ff4-05f7-4be5-a493-c48d6691d219",
     "name": "Radio Fiji2",
     "url": "https://peridot.streamguys1.com:7150/RFTwo",
-    "country": "IN",
+    "country": "FJ",
     "meta": "HINDI"
   },
   {
@@ -973,17 +840,10 @@
     "meta": "HINDI"
   },
   {
-    "id": "b8d3d3ce-3670-4cc2-92bc-7fd4b0ba6a5f",
-    "name": "Bhaktisudha",
-    "url": "https://n0a.radiojar.com/cfqyfcspcv8uv",
-    "country": "IN",
-    "meta": "HINDI"
-  },
-  {
     "id": "e2f0e47d-49b3-4892-9227-9784cdc40df2",
     "name": "Radio Zindagi",
     "url": "https://us9.maindigitalstream.com/ssl/RadioZindagi",
-    "country": "IN",
+    "country": "US",
     "meta": "HINDI"
   },
   {
@@ -1011,7 +871,7 @@
     "id": "9534e371-74ca-454b-b945-1cfd551eb593",
     "name": "Gazal Radio London",
     "url": "https://streaming.webhostnepal.com/8018/stream",
-    "country": "IN",
+    "country": "GB",
     "meta": "HINDI"
   },
   {
@@ -1034,13 +894,6 @@
     "url": "https://stream.zenolive.com/4mbfcn4mf24tv",
     "country": "IN",
     "meta": "PUNJABI"
-  },
-  {
-    "id": "7045f44a-4c99-466f-968a-379b470e5cda",
-    "name": "Akashvani Air Fm Gold",
-    "url": "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio005/hlspbaudio005_Auto.m3u8",
-    "country": "IN",
-    "meta": "HINDI"
   },
   {
     "id": "57742af1-79d4-4bc7-ae81-b58146638ae7",
@@ -1095,7 +948,7 @@
     "id": "8da9128f-cdbe-457f-961a-6eeebad44f94",
     "name": "Radio City Punjabi",
     "url": "https://prclive1.listenon.in/Punjabi",
-    "country": "IN",
+    "country": "CA",
     "meta": "PUNJABI"
   },
   {
@@ -1162,13 +1015,6 @@
     "meta": "PUNJABI"
   },
   {
-    "id": "f2a1bf08-7537-491c-9361-8e942266b552",
-    "name": "Air Solapur",
-    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio093/playlist.m3u8",
-    "country": "IN",
-    "meta": "ENGLISH-HINDI-MARATHI"
-  },
-  {
     "id": "b98349ad-75e0-40cc-86e1-342734445633",
     "name": "Radio Azad",
     "url": "https://edge.mixlr.com/channel/uaphi",
@@ -1197,13 +1043,6 @@
     "meta": "HINDI"
   },
   {
-    "id": "d63ab722-0eea-4d87-82cf-363c24e55b95",
-    "name": "All India Radio Air Punjabi",
-    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio138/chunklist.m3u8",
-    "country": "IN",
-    "meta": "PUNJABI"
-  },
-  {
     "id": "35753750-c632-4790-a42b-f591b254dd3f",
     "name": "Aaj Tak News Radio Live",
     "url": "https://feeds.intoday.in/aajtak/api/master.m3u8",
@@ -1225,13 +1064,6 @@
     "meta": "PUNJABI"
   },
   {
-    "id": "cded7a99-e1d1-44f3-b9e6-e698fa6fac05",
-    "name": "Air Shivapuri",
-    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio171/playlist.m3u8",
-    "country": "IN",
-    "meta": "ENGLISH-HINDI"
-  },
-  {
     "id": "e390c101-67cc-42b6-bcc0-852f78e48312",
     "name": "1600 Radio Punjab",
     "url": "https://worldradio.online/proxy/?q=http://198.178.121.76:8012/xstream&plugin_id=13399&site_id=12939547",
@@ -1251,27 +1083,6 @@
     "url": "https://stream-076.zeno.fm/67v0d997bzzuv?zs=u6lalcGUQpyrPhSNDI54LQ",
     "country": "IN",
     "meta": "PUNJABI"
-  },
-  {
-    "id": "0923786e-4a3c-4149-b7fa-154fe4f6e410",
-    "name": "Air Nagpur",
-    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio070/playlist.m3u8",
-    "country": "IN",
-    "meta": "ENGLISH-HINDI-MARATHI"
-  },
-  {
-    "id": "a715c44d-4494-4fda-a3d9-4d2ab4483597",
-    "name": "Air Mevad Kandva",
-    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio143/playlist.m3u8",
-    "country": "IN",
-    "meta": "ENGLISH-HINDI"
-  },
-  {
-    "id": "50d2f50b-2cc7-4a0d-ae09-647d5e46d9b6",
-    "name": "Air Nanded",
-    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio072/playlist.m3u8",
-    "country": "IN",
-    "meta": "HINDI-MARATHI"
   },
   {
     "id": "91fc1937-a8a0-4e85-92bf-0436175bcc5d",
@@ -1300,13 +1111,6 @@
     "url": "https://stream.zeno.fm/x1q3r3qdxy8uv",
     "country": "IN",
     "meta": "HINDI"
-  },
-  {
-    "id": "39ba765c-ee38-40a2-b23b-a73d4043adc7",
-    "name": "Air Aurangabad",
-    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio065/playlist.m3u8",
-    "country": "IN",
-    "meta": "ENGLISH-HINDI-MARATHI-URDU"
   },
   {
     "id": "2aee539c-dfee-4ba6-b77c-afc0481cc7bd",
@@ -1342,13 +1146,6 @@
     "url": "https://sonic.onlineaudience.co.uk/8140/stream",
     "country": "IN",
     "meta": "HINDI"
-  },
-  {
-    "id": "391b2e39-752e-4860-93ba-26416c82c4eb",
-    "name": "Air Junaghad",
-    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio115/playlist.m3u8",
-    "country": "IN",
-    "meta": "ENGLISH-GUJARATI-HINDI"
   },
   {
     "id": "bdce4656-9c41-4978-b16c-a2e995a46a9a",
@@ -1519,13 +1316,6 @@
     "meta": "HINDI"
   },
   {
-    "id": "4c9b5f1c-8d3b-4855-9ac0-eb9cf56a2566",
-    "name": "Vividh Bharti Mumbai",
-    "url": "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio011/hlspbaudio011_Auto.m3u8",
-    "country": "IN",
-    "meta": "HINDI"
-  },
-  {
     "id": "df3dfbcd-0666-42f1-af5f-563bc8508e90",
     "name": "Fm Gold Mumbai",
     "url": "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio007/hlspbaudio007_Auto.m3u8",
@@ -1536,20 +1326,6 @@
     "id": "d8471e65-7afe-407d-9d5a-1d68006b00c1",
     "name": "Bharat Fm",
     "url": "https://s2.radio.co/s44bb88930/listen#.mp3?ver=997168",
-    "country": "IN",
-    "meta": "HINDI"
-  },
-  {
-    "id": "2b66b9d2-2efe-44f4-aa94-003c6546e192",
-    "name": "Air Ahmednagar",
-    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio019/playlist.m3u8",
-    "country": "IN",
-    "meta": "HINDI-MARATHI"
-  },
-  {
-    "id": "82d52bee-76aa-4f40-8204-aee7c42b33c8",
-    "name": "Akashwani Air Fm Agartala",
-    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio131/playlist.m3u8",
     "country": "IN",
     "meta": "HINDI"
   },
@@ -1575,15 +1351,8 @@
     "meta": "ENGLISH-HINDI-NEPALI"
   },
   {
-    "id": "53c13dee-e203-4afd-b282-2f46f8fc0621",
-    "name": "Air Indore",
-    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio212/playlist.m3u8",
-    "country": "IN",
-    "meta": "ENGLISH-HINDI-URDU"
-  },
-  {
     "id": "dad5e72e-bbe6-42e8-958b-190543bd99aa",
-    "name": "Hindiretro",
+    "name": "Hindi Retro",
     "url": "https://mirchiplaylive.akamaized.net/hls/live/2036929-b/MUM/MRETRO_Auto.m3u8",
     "country": "IN",
     "meta": "HINDI"
@@ -1680,17 +1449,10 @@
     "meta": "HINDI"
   },
   {
-    "id": "7d70e654-9a0b-42e0-b5fa-942243b56caf",
-    "name": "Air Faizabad",
-    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio152/playlist.m3u8",
-    "country": "IN",
-    "meta": "ENGLISH-HINDI-URDU"
-  },
-  {
     "id": "b2bd5eb7-704e-492e-b0e6-c91e32998c7e",
     "name": "Lyca Radio 1458 Am",
     "url": "https://ads-direct.sharp-stream.com/1458.mp3",
-    "country": "IN",
+    "country": "GB",
     "meta": "HINDI"
   },
   {
@@ -1701,32 +1463,11 @@
     "meta": "HINDI"
   },
   {
-    "id": "1b118e06-bec2-404e-88e7-a5927cb6a4fc",
-    "name": "Air Kolhapur",
-    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio063/playlist.m3u8",
-    "country": "IN",
-    "meta": "ENGLISH-HINDI-MARATHI"
-  },
-  {
-    "id": "6a4888eb-0fd6-4f1f-b79e-bf22d36003be",
-    "name": "Air Patna",
-    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio087/playlist.m3u8",
-    "country": "IN",
-    "meta": "HINDI"
-  },
-  {
     "id": "cc4235c6-504d-4023-9bf1-a763b159cfe6",
     "name": "Kadak Fm",
     "url": "https://tinyurl.com/252quhck",
     "country": "IN",
     "meta": "HINDI"
-  },
-  {
-    "id": "ff045f75-731c-48aa-b5a5-0ef02218fa32",
-    "name": "Air Osmanabad",
-    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio132/playlist.m3u8",
-    "country": "IN",
-    "meta": "HINDI-MARATHI"
   },
   {
     "id": "cd269772-d488-4285-a646-3f739039ae5e",
@@ -1764,13 +1505,6 @@
     "meta": "HINDI"
   },
   {
-    "id": "93cd93af-daac-4a8d-b972-a8bc3934b79d",
-    "name": "Air Fm Rainbow Kochi",
-    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio044/playlist.m3u8",
-    "country": "IN",
-    "meta": "HINDI-MALAYALAM"
-  },
-  {
     "id": "38f38628-29ae-4f00-8ffb-cc2d1892494e",
     "name": "Radio Azad",
     "url": "https://usa2.fastcast4u.com/proxy/jgivvimk?mp=/1",
@@ -1806,13 +1540,6 @@
     "meta": "HINDI"
   },
   {
-    "id": "1c6030bd-0bae-4cbf-b842-ca95a26e9387",
-    "name": "Air Delhi Fm Gold",
-    "url": "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio005/hlspbaudio00532kbps.m3u8",
-    "country": "IN",
-    "meta": "ENGLISH-HINDI"
-  },
-  {
     "id": "3c5fceda-40dc-47be-8e57-b2fdc68b55ce",
     "name": "Radio Olive Kids",
     "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_OLIVE_CLUB_S04AAC.aac",
@@ -1823,13 +1550,6 @@
     "id": "e27a9406-b0ad-46c0-906d-596ce3394418",
     "name": "Radio Krishna",
     "url": "https://millenniumhits.out.airtime.pro:8000/millenniumhits_a?fbclid=IwAR0qP_F8RgDCq3gX8g7U8Dmm_uZedtPrqxCf8iIDAW5Jcd5ktA0XMs6BJu4",
-    "country": "IN",
-    "meta": "HINDI"
-  },
-  {
-    "id": "f5c095e7-6517-4175-9203-5b9e907fb821",
-    "name": "Air News 24/7",
-    "url": "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio002/hlspbaudio00264kbps.m3u8",
     "country": "IN",
     "meta": "HINDI"
   },
@@ -1890,13 +1610,6 @@
     "meta": "HINDI"
   },
   {
-    "id": "2bbdb06a-3796-4bc1-a665-3d345c9416ce",
-    "name": "Air Alwar",
-    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio153/playlist.m3u8",
-    "country": "IN",
-    "meta": "ENGLISH-HINDI"
-  },
-  {
     "id": "702371ed-b373-4627-b370-45127c2e280f",
     "name": "Namaste Bollywood",
     "url": "https://stream.zeno.fm/cqak4ap7by8uv",
@@ -1911,13 +1624,6 @@
     "meta": "HINDI"
   },
   {
-    "id": "14f4e748-83e6-4bcf-ab15-ab053aab764b",
-    "name": "Air Raichur",
-    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio198/playlist.m3u8",
-    "country": "IN",
-    "meta": "ENGLISH-HINDI-KANNADA"
-  },
-  {
     "id": "8eceafa2-9c04-417e-90e4-36eb6524f46c",
     "name": "Lyca Gold",
     "url": "https://listen-lycaradio.sharp-stream.com/1035.mp3",
@@ -1925,17 +1631,10 @@
     "meta": "HINDI"
   },
   {
-    "id": "f7f4002f-9559-4ca1-a59c-8e9e5d4fda9e",
-    "name": "Hand Of Jesus - Hindi",
-    "url": "https://dc1.serverse.com/proxy/hojhindi/stream",
-    "country": "IN",
-    "meta": "HINDI"
-  },
-  {
     "id": "a886391c-fca5-4b6e-8344-8dea2cbcc0b8",
     "name": "Radio Olive Retro",
     "url": "https://playerservices.streamtheworld.com/api/livestream-redirect/RADIO_OLIVE_RETRO_S03_SC",
-    "country": "IN",
+    "country": "QA",
     "meta": "HINDI"
   },
   {
@@ -1951,13 +1650,6 @@
     "url": "https://drive.uber.radio/uber/lrbollywood/icecast.audio",
     "country": "IN",
     "meta": "HINDI"
-  },
-  {
-    "id": "137201a1-6422-4909-aa3d-7a8dffad7ae1",
-    "name": "Air Satara",
-    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio076/playlist.m3u8",
-    "country": "IN",
-    "meta": "ENGLISH-HINDI-MARATHI"
   },
   {
     "id": "8500c025-a884-4a3b-822a-f7c65bb92dbe",
@@ -2005,7 +1697,7 @@
     "id": "dd5581ff-f036-4874-800d-c023535c9704",
     "name": "Ujala Radio",
     "url": "https://server4.ujala.nl/stream/2/listen.mp3",
-    "country": "IN",
+    "country": "NL",
     "meta": "HINDI"
   },
   {
@@ -2014,13 +1706,6 @@
     "url": "https://ais-nzme.streamguys1.com/nz_145/playlist.m3u8",
     "country": "IN",
     "meta": "HINDI"
-  },
-  {
-    "id": "07077980-59e1-4511-8e5a-0ed4aaebf6cd",
-    "name": "Air Bikaner",
-    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio053/playlist.m3u8",
-    "country": "IN",
-    "meta": "ENGLISH-HINDI"
   },
   {
     "id": "2d2df45f-afe1-44ad-a4a4-29558af573db",
@@ -2086,20 +1771,6 @@
     "meta": "HINDI"
   },
   {
-    "id": "4507925d-4c86-432d-bf24-9d041cc9185a",
-    "name": "Bhajans Radio Guyana",
-    "url": "https://s5.citrus3.com:8148/stream",
-    "country": "IN",
-    "meta": "HINDI"
-  },
-  {
-    "id": "ca0a06e4-be2a-412d-8078-429c6b4fd0c2",
-    "name": "Air Amaravati",
-    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio151/playlist.m3u8",
-    "country": "IN",
-    "meta": "ENGLISH-HINDI-MARATHI"
-  },
-  {
     "id": "0da6e2d4-6734-4947-b737-b8c87caaad79",
     "name": "Amor Fm",
     "url": "https://amorfm_192.streampartner.nl/stream",
@@ -2114,17 +1785,318 @@
     "meta": "HINDI"
   },
   {
-    "id": "fa7cd74b-ee5b-462a-903e-399a47b796d1",
-    "name": "Air Vbs Ahmedabad",
-    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio037/chunklist.m3u8",
-    "country": "IN",
-    "meta": "GUJARATI-HINDI"
-  },
-  {
     "id": "94f5f342-7020-4171-8356-fe512527bb51",
     "name": "Club Asia Radio",
     "url": "https://s3.citrus3.com:8320/stream",
     "country": "IN",
     "meta": "HINDI"
+  },
+  {
+    "id": "5f3701e9-3403-4a81-b6aa-5504c1da210c",
+    "name": "Aakashvani",
+    "url": "https://audio-edge-fvq45.ams.d.radiomast.io/3ccc1156-fcf8-4ba7-9a0c-28e3a465e1ae?listening-from-radio-garden=1607152226837",
+    "country": "IN",
+    "meta": "HINDI"
+  },
+  {
+    "id": "80930c69-14e4-4d29-b71f-a836620b9e8d",
+    "name": "Air Shimhapuri Kakupalli Fm",
+    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio168/playlist.m3u8",
+    "country": "IN",
+    "meta": "HINDI-TELUGU"
+  },
+  {
+    "id": "b7bf9005-cb1d-4734-b7cd-8c3df6de1346",
+    "name": "Air Sasaram",
+    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio075/playlist.m3u8",
+    "country": "IN",
+    "meta": "BIHARI-ENGLISH-HINDI"
+  },
+  {
+    "id": "f1623eb0-9a9a-4c53-b6af-93739128ba16",
+    "name": "Air Prayagraj",
+    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio125/playlist.m3u8",
+    "country": "IN",
+    "meta": "HINDI"
+  },
+  {
+    "id": "739b2415-fc66-4f5f-a406-524ef3a42681",
+    "name": "Air Almora",
+    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio122/playlist.m3u8",
+    "country": "IN",
+    "meta": "HINDI"
+  },
+  {
+    "id": "feaf6d61-20d3-431c-8ff4-97ab5964db3e",
+    "name": "Sri Harmandir Sahib Live Kirtan",
+    "url": "https://radio.sikhnet.com/proxy/channel9/live",
+    "country": "IN",
+    "meta": "PUNJABI"
+  },
+  {
+    "id": "b66eb0a1-10c4-4504-87af-b2bacbac4e58",
+    "name": "Air Bhadravati",
+    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio211/playlist.m3u8",
+    "country": "IN",
+    "meta": "ENGLISH-HINDI-KANNADA"
+  },
+  {
+    "id": "b9078dfd-fa88-4c62-bf43-5308e057cad7",
+    "name": "Air Bhopal",
+    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio212/chunklist.m3u8",
+    "country": "IN",
+    "meta": "HINDI"
+  },
+  {
+    "id": "8c8696dd-26d9-416f-bf95-a48366aabd2f",
+    "name": "Air Agra",
+    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio059/playlist.m3u8",
+    "country": "IN",
+    "meta": "HINDI"
+  },
+  {
+    "id": "042a5b41-1604-4ba9-8c35-0efa02066dc5",
+    "name": "Air Fm Rainbow Delhi",
+    "url": "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio004/hlspbaudio004_Auto.m3u8",
+    "country": "IN",
+    "meta": "HINDI"
+  },
+  {
+    "id": "68d00a44-200c-4c82-b17f-18d777f3b2ee",
+    "name": "Air Vividh Bharti",
+    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio001/playlist.m3u8",
+    "country": "IN",
+    "meta": "HINDI"
+  },
+  {
+    "id": "27aead2d-bb52-46ef-a2e7-ff138d911d7d",
+    "name": "Fm Air Bhatinda",
+    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio117/playlist.m3u8",
+    "country": "IN",
+    "meta": "PUNJABI"
+  },
+  {
+    "id": "6b17e3b9-a93e-43fe-8943-334027c97e0e",
+    "name": "Air Punjabi",
+    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio138/playlist.m3u8",
+    "country": "IN",
+    "meta": "PUNJABI"
+  },
+  {
+    "id": "48aade73-fc35-4f50-b9bc-ccfea833e74a",
+    "name": "Radio Gyanbh Air Av",
+    "url": "https://sonic.onlineaudience.co.uk/8086/stream",
+    "country": "IN",
+    "meta": "HINDI"
+  },
+  {
+    "id": "8b8e75b3-01a2-423d-b666-59b7f358e652",
+    "name": "Fm Air Lucknow",
+    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio046/playlist.m3u8",
+    "country": "IN",
+    "meta": "HINDI"
+  },
+  {
+    "id": "5baa918a-01b6-4231-abab-9f8f9cfefb2f",
+    "name": "Gurbani Kirtan",
+    "url": "https://gurbanikirtan.radioca.st/start.mp3",
+    "country": "IN",
+    "meta": "PUNJABI"
+  },
+  {
+    "id": "b8d3d3ce-3670-4cc2-92bc-7fd4b0ba6a5f",
+    "name": "Bhaktisudha",
+    "url": "https://n0a.radiojar.com/cfqyfcspcv8uv",
+    "country": "IN",
+    "meta": "HINDI"
+  },
+  {
+    "id": "7045f44a-4c99-466f-968a-379b470e5cda",
+    "name": "Akashvani Air Fm Gold",
+    "url": "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio005/hlspbaudio005_Auto.m3u8",
+    "country": "IN",
+    "meta": "HINDI"
+  },
+  {
+    "id": "f2a1bf08-7537-491c-9361-8e942266b552",
+    "name": "Air Solapur",
+    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio093/playlist.m3u8",
+    "country": "IN",
+    "meta": "ENGLISH-HINDI-MARATHI"
+  },
+  {
+    "id": "d63ab722-0eea-4d87-82cf-363c24e55b95",
+    "name": "All India Radio Air Punjabi",
+    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio138/chunklist.m3u8",
+    "country": "IN",
+    "meta": "PUNJABI"
+  },
+  {
+    "id": "cded7a99-e1d1-44f3-b9e6-e698fa6fac05",
+    "name": "Air Shivapuri",
+    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio171/playlist.m3u8",
+    "country": "IN",
+    "meta": "ENGLISH-HINDI"
+  },
+  {
+    "id": "0923786e-4a3c-4149-b7fa-154fe4f6e410",
+    "name": "Air Nagpur",
+    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio070/playlist.m3u8",
+    "country": "IN",
+    "meta": "ENGLISH-HINDI-MARATHI"
+  },
+  {
+    "id": "a715c44d-4494-4fda-a3d9-4d2ab4483597",
+    "name": "Air Mevad Kandva",
+    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio143/playlist.m3u8",
+    "country": "IN",
+    "meta": "ENGLISH-HINDI"
+  },
+  {
+    "id": "50d2f50b-2cc7-4a0d-ae09-647d5e46d9b6",
+    "name": "Air Nanded",
+    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio072/playlist.m3u8",
+    "country": "IN",
+    "meta": "HINDI-MARATHI"
+  },
+  {
+    "id": "39ba765c-ee38-40a2-b23b-a73d4043adc7",
+    "name": "Air Aurangabad",
+    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio065/playlist.m3u8",
+    "country": "IN",
+    "meta": "ENGLISH-HINDI-MARATHI-URDU"
+  },
+  {
+    "id": "391b2e39-752e-4860-93ba-26416c82c4eb",
+    "name": "Air Junaghad",
+    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio115/playlist.m3u8",
+    "country": "IN",
+    "meta": "ENGLISH-GUJARATI-HINDI"
+  },
+  {
+    "id": "4c9b5f1c-8d3b-4855-9ac0-eb9cf56a2566",
+    "name": "Vividh Bharti Mumbai",
+    "url": "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio011/hlspbaudio011_Auto.m3u8",
+    "country": "IN",
+    "meta": "HINDI"
+  },
+  {
+    "id": "2b66b9d2-2efe-44f4-aa94-003c6546e192",
+    "name": "Air Ahmednagar",
+    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio019/playlist.m3u8",
+    "country": "IN",
+    "meta": "HINDI-MARATHI"
+  },
+  {
+    "id": "82d52bee-76aa-4f40-8204-aee7c42b33c8",
+    "name": "Akashwani Air Fm Agartala",
+    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio131/playlist.m3u8",
+    "country": "IN",
+    "meta": "HINDI"
+  },
+  {
+    "id": "53c13dee-e203-4afd-b282-2f46f8fc0621",
+    "name": "Air Indore",
+    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio212/playlist.m3u8",
+    "country": "IN",
+    "meta": "ENGLISH-HINDI-URDU"
+  },
+  {
+    "id": "7d70e654-9a0b-42e0-b5fa-942243b56caf",
+    "name": "Air Faizabad",
+    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio152/playlist.m3u8",
+    "country": "IN",
+    "meta": "ENGLISH-HINDI-URDU"
+  },
+  {
+    "id": "1b118e06-bec2-404e-88e7-a5927cb6a4fc",
+    "name": "Air Kolhapur",
+    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio063/playlist.m3u8",
+    "country": "IN",
+    "meta": "ENGLISH-HINDI-MARATHI"
+  },
+  {
+    "id": "6a4888eb-0fd6-4f1f-b79e-bf22d36003be",
+    "name": "Air Patna",
+    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio087/playlist.m3u8",
+    "country": "IN",
+    "meta": "HINDI"
+  },
+  {
+    "id": "ff045f75-731c-48aa-b5a5-0ef02218fa32",
+    "name": "Air Osmanabad",
+    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio132/playlist.m3u8",
+    "country": "IN",
+    "meta": "HINDI-MARATHI"
+  },
+  {
+    "id": "93cd93af-daac-4a8d-b972-a8bc3934b79d",
+    "name": "Air Fm Rainbow Kochi",
+    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio044/playlist.m3u8",
+    "country": "IN",
+    "meta": "HINDI-MALAYALAM"
+  },
+  {
+    "id": "1c6030bd-0bae-4cbf-b842-ca95a26e9387",
+    "name": "Air Delhi Fm Gold",
+    "url": "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio005/hlspbaudio00532kbps.m3u8",
+    "country": "IN",
+    "meta": "ENGLISH-HINDI"
+  },
+  {
+    "id": "f5c095e7-6517-4175-9203-5b9e907fb821",
+    "name": "Air News 24/7",
+    "url": "https://airhlspush.pc.cdn.bitgravity.com/httppush/hlspbaudio002/hlspbaudio00264kbps.m3u8",
+    "country": "IN",
+    "meta": "HINDI"
+  },
+  {
+    "id": "2bbdb06a-3796-4bc1-a665-3d345c9416ce",
+    "name": "Air Alwar",
+    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio153/playlist.m3u8",
+    "country": "IN",
+    "meta": "ENGLISH-HINDI"
+  },
+  {
+    "id": "14f4e748-83e6-4bcf-ab15-ab053aab764b",
+    "name": "Air Raichur",
+    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio198/playlist.m3u8",
+    "country": "IN",
+    "meta": "ENGLISH-HINDI-KANNADA"
+  },
+  {
+    "id": "137201a1-6422-4909-aa3d-7a8dffad7ae1",
+    "name": "Air Satara",
+    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio076/playlist.m3u8",
+    "country": "IN",
+    "meta": "ENGLISH-HINDI-MARATHI"
+  },
+  {
+    "id": "07077980-59e1-4511-8e5a-0ed4aaebf6cd",
+    "name": "Air Bikaner",
+    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio053/playlist.m3u8",
+    "country": "IN",
+    "meta": "ENGLISH-HINDI"
+  },
+  {
+    "id": "4507925d-4c86-432d-bf24-9d041cc9185a",
+    "name": "Bhajans Radio Guyana",
+    "url": "https://s5.citrus3.com:8148/stream",
+    "country": "IN",
+    "meta": "HINDI"
+  },
+  {
+    "id": "ca0a06e4-be2a-412d-8078-429c6b4fd0c2",
+    "name": "Air Amaravati",
+    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio151/playlist.m3u8",
+    "country": "IN",
+    "meta": "ENGLISH-HINDI-MARATHI"
+  },
+  {
+    "id": "fa7cd74b-ee5b-462a-903e-399a47b796d1",
+    "name": "Air Vbs Ahmedabad",
+    "url": "https://air.pc.cdn.bitgravity.com/air/live/pbaudio037/chunklist.m3u8",
+    "country": "IN",
+    "meta": "GUJARATI-HINDI"
   }
 ]

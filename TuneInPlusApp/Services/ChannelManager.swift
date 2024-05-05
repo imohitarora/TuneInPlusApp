@@ -204,13 +204,7 @@ class ChannelManager: ObservableObject {
         channels = unsortedChannels.sorted {
             let isLocale0 = $0.country.lowercased() == userCountryCode
             let isLocale1 = $1.country.lowercased() == userCountryCode
-            if isLocale0 && !isLocale1 {
-                return true
-            } else if !isLocale0 && isLocale1 {
-                return false
-            } else {
-                return $0.name < $1.name
-            }
+            return isLocale0 && !isLocale1
         }
     }
 }
