@@ -89,7 +89,7 @@ class ChannelManager: ObservableObject {
         audioPlayer.play()
         isPlaying = true
         currentPlayer = channel
-        if let index = currentPlaylist.firstIndex(of: channel) {
+        if let index = currentPlaylist.firstIndex(where: { $0.id == channel.id}) {
             currentChannelIndex = index
         }
         updateNowPlayingInfo()
@@ -139,7 +139,7 @@ class ChannelManager: ObservableObject {
     
     func toggleFavorite(channel: Channel) {
         print("toggleFavorite clicked")
-        if let index = favoriteChannels.firstIndex(of: channel) {
+        if let index = favoriteChannels.firstIndex(where: { $0.id == channel.id})  {
             favoriteChannels.remove(at: index)
             print("Removed from favorites")
         } else {

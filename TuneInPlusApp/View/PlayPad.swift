@@ -30,7 +30,7 @@ struct PlayPad: View {
                                 .shadow(color: Color("Shadow"), radius: 2, x: 0, y: 2)
                             
                             LazyVStack(spacing: 1) {
-                                ForEach(setChannelList(), id: \.self) { channel in
+                                ForEach(setChannelList(), id: \.id) { channel in
                                     ChannelRow(channel: channel,
                                                isPlaying: checkPlaying(channel: channel),
                                                isFavourite: checkFavorite(channel: channel),
